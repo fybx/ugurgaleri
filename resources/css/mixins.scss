@@ -1,0 +1,31 @@
+@use "variables.scss";
+
+@mixin mobileS {
+  @media screen and (max-width: $mobileS) {
+    @content;
+  }
+}
+
+@mixin navbar_overflow {
+  @media screen and (max-width: variables.$navbar_overflow) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin main {
+  @media screen and (max-width: variables.$main) {
+    @content;
+  }
+}
+
+@mixin fourK {
+  @media screen and (max-width: $fourK) {
+    @content;
+  }
+}

@@ -1,0 +1,58 @@
+@use "variables.scss";
+@use "mixins.scss";
+@use "partials/header.scss";
+@use "partials/footer.scss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 1700px 1fr;
+  grid-row-end: -1;
+  grid-auto-rows: 1fr;
+  grid-gap: 0;
+
+  @include mixins.main {
+    grid-template-columns: 0 1fr 0;
+    background: red;
+  }
+}
+
+#left {
+  background: aqua;
+  grid-column: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#content {
+  background: aquamarine;
+  grid-column-start: 2;
+  grid-row-start: 2;
+
+  padding: variables.$innerContainerMargin;
+  overflow-wrap: break-word;
+}
+
+#footer {
+  background: black;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#right {
+  background: aqua;
+  grid-column: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
