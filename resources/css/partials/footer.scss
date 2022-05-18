@@ -1,5 +1,5 @@
 @use "../variables.scss";
-
+@use "../mixins.scss";
 
 #footer {
   background: variables.$clr_footer;
@@ -17,10 +17,18 @@
     margin: 0 20px 0 0;
 
     h2 {
-      font: 22px "Montserrat", sans-serif;
+      font: variables.$sz_l_footer_h "Montserrat", sans-serif;
       font-weight: 600;
       color: white;
       margin-bottom: 0;
+
+      @include mixins.footer_overflow {
+        font-size: variables.$sz_m_footer_h;
+      }
+
+      @include mixins.footer_overflow2 {
+        font-size: variables.$sz_s_footer_h;
+      }
     }
 
     hr {
@@ -37,6 +45,14 @@
 
       &:hover {
         color: variables.$clr_footer_active;
+      }
+
+      @include mixins.footer_overflow {
+        font-size: variables.$sz_m_footer_p;
+      }
+
+      @include mixins.footer_overflow2 {
+        font-size: variables.$sz_s_footer_p;
       }
     }
 
@@ -63,6 +79,14 @@
       font-weight: 500;
       color: inherit;
       margin: 0;
+
+      @include mixins.footer_overflow {
+        font-size: variables.$sz_m_footer_p;
+      }
+
+      @include mixins.footer_overflow2 {
+        font-size: variables.$sz_s_footer_p;
+      }
     }
 
     &:last-of-type {

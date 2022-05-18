@@ -12,8 +12,14 @@
   }
 }
 
-@mixin tablet {
-  @media screen and (max-width: $tablet) {
+@mixin footer_overflow {
+  @media screen and (max-width: variables.$footer_overflow) {
+    @content;
+  }
+}
+
+@mixin footer_overflow2 {
+  @media screen and (max-width: variables.$footer_overflow2) {
     @content;
   }
 }
