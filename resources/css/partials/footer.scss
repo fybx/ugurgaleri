@@ -2,6 +2,7 @@
 
 
 #footer {
+  background: variables.$clr_footer;
   margin: 0;
   display: flex;
   justify-content: flex-start;
@@ -10,7 +11,7 @@
   padding: variables.$innerContainerMargin;
 
   .footer-column {
-    color: aliceblue;
+    color: variables.$clr_footer_sleep;
     display: flex;
     flex-direction: column;
     margin: 0 20px 0 0;
@@ -33,6 +34,10 @@
       margin: 0 0 5px 0;
       font: 16px "Montserrat", sans-serif;
       font-weight: 500;
+
+      &:hover {
+        color: variables.$clr_footer_active;
+      }
     }
 
     .footer-social {
@@ -48,7 +53,7 @@
       }
 
       &:hover {
-        background: variables.$clr_nav_active;
+        background: variables.$clr_footer_active;
         color: black;
       }
     }
