@@ -38,6 +38,19 @@
           margin-right: 0;
         }
       }
+
+      @include mixins.header_overflow {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+    margin-right: variables.$innerContainerMargin;
+
+    @include mixins.header_overflow {
+      display: block;
     }
   }
 }

@@ -17,7 +17,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-left: 20px;
-  color: #D6FFFF;
+  color: #FDFFFF;
 }
 #header .navbar {
   display: flex;
@@ -30,11 +30,25 @@
   text-decoration: none;
 }
 #header .navbar .nav-item:hover {
-  color: #D6FFFF;
+  color: #FDFFFF;
 }
 @media screen and (max-width: 550px) {
   #header .navbar .nav-item:last-of-type {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 730px) {
+  #header .navbar .nav-item {
+    display: none;
+  }
+}
+#header .menu {
+  display: none;
+  margin-right: 20px;
+}
+@media screen and (max-width: 730px) {
+  #header .menu {
+    display: block;
   }
 }
 

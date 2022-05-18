@@ -18,6 +18,12 @@
   }
 }
 
+@mixin header_overflow {
+  @media screen and (max-width: variables.$header_overflow) {
+    @content;
+  }
+}
+
 @mixin footer_overflow2 {
   @media screen and (max-width: variables.$footer_overflow2) {
     @content;
