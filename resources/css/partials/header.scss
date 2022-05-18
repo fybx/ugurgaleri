@@ -2,6 +2,7 @@
 @use "../mixins.scss";
 
 #header {
+  background: variables.$clr_header;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,7 +13,10 @@
   }
 
   #logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     margin-left: variables.$innerContainerMargin;
+    color: variables.$clr_logo
   }
 
   .navbar {
@@ -20,7 +24,14 @@
 
     .nav-item {
       margin-right: variables.$innerContainerMargin;
+      font: 18px "Montserrat", sans-serif;
+      font-weight: 600;
+      color: variables.$clr_nav_sleep;
       text-decoration: none;
+
+      &:hover {
+        color: variables.$clr_nav_active;
+      }
 
       @include mixins.navbar_overflow {
         &:last-of-type {

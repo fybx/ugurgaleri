@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 #header {
+  background: #01003B;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,14 +14,23 @@
   }
 }
 #header #logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   margin-left: 20px;
+  color: #D6FFFF;
 }
 #header .navbar {
   display: flex;
 }
 #header .navbar .nav-item {
   margin-right: 20px;
+  font: 18px "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #A3C2C2;
   text-decoration: none;
+}
+#header .navbar .nav-item:hover {
+  color: #D6FFFF;
 }
 @media screen and (max-width: 550px) {
   #header .navbar .nav-item:last-of-type {
@@ -25,9 +38,66 @@
   }
 }
 
+#footer {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+}
+#footer .footer-column {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+}
+#footer .footer-column h2 {
+  font: 22px "Montserrat", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0;
+}
+#footer .footer-column hr {
+  margin: 0 0 10px 0;
+  border: 1px dotted white;
+}
+#footer .footer-column a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0 5px 0;
+  font: 16px "Montserrat", sans-serif;
+  font-weight: 500;
+}
+#footer .footer-column .footer-social {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+}
+#footer .footer-column .footer-social img {
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  margin: 0 15px 0 0;
+}
+#footer .footer-column .footer-social:hover {
+  background: #D6FFFF;
+  color: black;
+}
+#footer .footer-column p {
+  font: 16px "Montserrat", sans-serif;
+  font-weight: 500;
+  color: inherit;
+  margin: 0;
+}
+#footer .footer-column:last-of-type {
+  margin: 0;
+}
+
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #364040;
 }
 
 #container {
@@ -47,7 +117,6 @@ html, body {
 }
 
 #left {
-  background: aqua;
   grid-column: 1;
   grid-row-start: 1;
   grid-row-end: 3;
@@ -73,7 +142,6 @@ html, body {
 }
 
 #right {
-  background: aqua;
   grid-column: 3;
   grid-row-start: 1;
   grid-row-end: 3;
