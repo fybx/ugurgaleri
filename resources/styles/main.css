@@ -56,9 +56,6 @@
 }
 #header #logo {
   height: 56px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  color: #FDFFFF;
 }
 @media screen and (max-width: 850px) {
   #header #logo {
@@ -89,6 +86,20 @@
 #header .menu {
   display: none;
   filter: invert(1);
+  height: 56px;
+  width: auto;
+}
+#header .menu img {
+  height: 56px;
+  width: auto;
+}
+@media screen and (max-width: 850px) {
+  #header .menu {
+    height: 36px;
+  }
+  #header .menu img {
+    height: 36px;
+  }
 }
 @media screen and (max-width: 1200px) {
   #header .menu {

@@ -17,10 +17,6 @@
 
   #logo {
     height: 56px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-
-    color: variables.$clr_logo;
 
     @include mixins.header_overflow2 {
       height: 36px;
@@ -54,6 +50,20 @@
   .menu {
     display: none;
     filter: invert(1);
+    height: 56px;
+    width: auto;
+
+    img {
+      height: 56px;
+      width: auto;
+    }
+
+    @include mixins.header_overflow2 {
+      img {
+        height: 36px;
+      }
+      height: 36px;
+    }
 
     @include mixins.header_overflow {
       display: block;
