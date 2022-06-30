@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta name="description" content="Uğur Galeri">
-    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <title>Uğur Galeri</title>
 </head>
 <body>
+    <header id="header">
+        <img id="logo" src="resources/img/ugurgaleri-yazıtek.png">
+        <nav class="navbar">
+            <a class="nav-item" href="index.html">Ana sayfa</a>
+            <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
+            <a class="nav-item" href="#brands">Markalar</a>
+            <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+            <a class="nav-item" href="iletisim.html">İletişim</a>
+        </nav>
+        <a class="menu"><img alt="Menu" src="resources/img/menu-white.png"></a>
+    </header>
     <div id="container">
-        <header id="header">
-            <h1 id="logo">Uğur Galeri</h1>
-            <nav class="navbar">
-                <a class="nav-item" href="index.html">Ana sayfa</a>
-                <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
-                <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
-                <a class="nav-item" href="iletisim.html">İletişim</a>
-            </nav>
-            <a class="menu"><img alt="Menu" src="resources/imgs/menu-white.png"></a>
-        </header>
-        <div id="left"></div> <!-- Intentionally blank -->
         <div id="content">
-            <h1>Merhaba!</h1>
+            <div class="showcase">
+                <img src="resources/img/showcase.jpg">
+                <h1>Biz bir şeyler satıyoruz.</h1>
+            </div>
+            <div id="brands" class="group">
+                <div class="group-item">
+                    <img src="resources/img/ugurgaleri-yazıtek.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem dolore iusto nisi sit voluptate voluptatibus! Corporis deserunt dolores et vel voluptatum! Amet animi assumenda at atque cum cupiditate debitis esse ex exercitationem ipsam ipsum iure libero mollitia nesciunt nostrum odio optio perferendis quam quis repellat sed sint vel vero, voluptatem voluptates! At, aut beatae debitis distinctio doloribus enim eveniet ex exercitationem iusto magnam minus molestias nostrum odio quas vel? At natus officia sint unde voluptates? Aliquid ducimus nesciunt odit quia ratione velit! Consequatur cumque, deleniti enim et explicabo inventore minima quaerat quidem quod sed. Aperiam dolor eum odit sed!</p>
+                </div>
+                <div class="group-item">
+                    <figure>
+                        <img src="resources/img/ukt.png" alt="Uğur Koçak Treyler logosu">
+                        <hr>
+                        <img class="side" src="resources/img/makinsan.png" alt="Makinsan logosu">
+                        <img class="side" src="resources/img/krone.jpg" alt="Krone logosu">
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem dolore iusto nisi sit voluptate voluptatibus! Corporis deserunt dolores et vel voluptatum! Amet animi assumenda at atque cum cupiditate debitis esse ex exercitationem ipsam ipsum iure libero mollitia nesciunt nostrum odio optio perferendis quam quis repellat sed sint vel vero, voluptatem voluptates! At, aut beatae debitis distinctio doloribus enim eveniet ex exercitationem iusto magnam minus molestias nostrum odio quas vel? At natus officia sint unde voluptates? Aliquid ducimus nesciunt odit quia ratione velit! Consequatur cumque, deleniti enim et explicabo inventore minima quaerat quidem quod sed. Aperiam dolor eum odit sed!</p>
+                </div>
+                <div class="group-item">
+                    <img src="resources/img/ugurgaleri-yazıtek.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem dolore iusto nisi sit voluptate voluptatibus! Corporis deserunt dolores et vel voluptatum! Amet animi assumenda at atque cum cupiditate debitis esse ex exercitationem ipsam ipsum iure libero mollitia nesciunt nostrum odio optio perferendis quam quis repellat sed sint vel vero, voluptatem voluptates! At, aut beatae debitis distinctio doloribus enim eveniet ex exercitationem iusto magnam minus molestias nostrum odio quas vel? At natus officia sint unde voluptates? Aliquid ducimus nesciunt odit quia ratione velit! Consequatur cumque, deleniti enim et explicabo inventore minima quaerat quidem quod sed. Aperiam dolor eum odit sed!</p>
+                </div>
+                <div class="group-item">
+                    <img src="resources/img/ugurgaleri-yazıtek.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem dolore iusto nisi sit voluptate voluptatibus! Corporis deserunt dolores et vel voluptatum! Amet animi assumenda at atque cum cupiditate debitis esse ex exercitationem ipsam ipsum iure libero mollitia nesciunt nostrum odio optio perferendis quam quis repellat sed sint vel vero, voluptatem voluptates! At, aut beatae debitis distinctio doloribus enim eveniet ex exercitationem iusto magnam minus molestias nostrum odio quas vel? At natus officia sint unde voluptates? Aliquid ducimus nesciunt odit quia ratione velit! Consequatur cumque, deleniti enim et explicabo inventore minima quaerat quidem quod sed. Aperiam dolor eum odit sed!</p>
+                </div>
+            </div>
+            <div id="social">
+            </div>
         </div>
-        <div id="right"></div> <!-- Intentionally blank -->
         <footer id="footer">
             <div class="footer-column">
                 <h2>Uğur Galeri</h2>
@@ -39,27 +66,23 @@
                 <a>Misyonumuz</a>
                 <a>Vizyonumuz</a>
                 <a>Yönetim</a>
-                <a>KVKK Aydınlatma Metni</a>
-                <a>KVKK Kamera Kullanımı</a>
+                <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>
+                <a href="kamera.html">KVKK Kamera Kullanımı</a>
             </div>
             <div class="footer-column">
                 <h2>Sosyal Medyada Biz</h2>
                 <hr>
                 <a class="footer-social" href="https://www.arabam.com/galeri/yavuz-ugur-galeri">
-                    <img src="resources/imgs/arabam.jpg" alt="arabam.com logosu">
-                    <p>Arabam.com</p>
+                    <img src="resources/img/arabam.jpg" alt="arabam.com logosu">
                 </a>
                 <a class="footer-social" href="https://ugurgaleri1.sahibinden.com/">
-                    <img src="resources/imgs/sahibinden.png" alt="sahibinden.com logosu">
-                    <p>Sahibinden.com</p>
+                    <img src="resources/img/sahibinden.png" alt="sahibinden.com logosu">
                 </a>
                 <a class="footer-social" href="https://www.facebook.com/ugurgalerikaracabey/">
-                    <img src="resources/imgs/facebook.svg" alt="facebook.com logosu">
-                    <p>Facebook</p>
+                    <img src="resources/img/facebook.svg" alt="facebook.com logosu">
                 </a>
                 <a class="footer-social" href="https://www.instagram.com/ugurgaleri/">
-                    <img src="resources/imgs/instagram.png" alt="instagram.com logosu">
-                    <p>Instagram</p>
+                    <img src="resources/img/instagram.png" alt="instagram.com logosu">
                 </a>
             </div>
             <div class="footer-column">

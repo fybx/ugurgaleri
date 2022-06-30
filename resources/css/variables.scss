@@ -1,12 +1,15 @@
 $mobileS: 360px;
-$navbar_overflow: 550px;
-$header_overflow: 730px;
+$header_overflow: 1200px;
+$header_overflow2: 850px;
+$content_fix: 850px;
 $footer_overflow2: 880px;
 $footer_overflow: 1110px;
 $main: 1700px;
 $fourK: 2560px;
 
-$innerContainerMargin: 20px;
+$px_headerPadding: 150px;
+$px_headerPadding2: 50px;
+$px_contentPadding: 200px;
 
 $sz_l_footer_h: 22px;
 $sz_m_footer_h: 18px;
@@ -15,10 +18,12 @@ $sz_l_footer_p: 16px;
 $sz_m_footer_p: 12px;
 $sz_s_footer_p: 8px;
 
-$clr_header: #01003B;
+$clr_dark: #01003B;
+
 $clr_logo: #FDFFFF;
-$clr_nav_sleep: #A3C2C2;
-$clr_nav_active: $clr_logo;
+$clr_header: #FDFFFF;
+$clr_nav_sleep: #706fff;
+$clr_nav_active: #01003B;
 
 $clr_footer: #000000;
 $clr_footer_sleep: #DFE8E8;

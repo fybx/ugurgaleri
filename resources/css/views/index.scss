@@ -1,0 +1,50 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+.showcase {
+  position: relative;
+  background-image: none;
+  background-color: black;
+
+  img {
+    width: 100%;
+    height: auto;
+    filter: brightness(50%);
+  }
+
+  h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+
+    font: 800 128px "Montserrat", sans-serif;
+    color: #FFFFFF;
+  }
+}
+
+.group {
+  background-color: #FFFFFF;
+  padding: 10px variables.$px_contentPadding;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.group-item {
+  display: flex;
+  flex-direction: column;
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  p {
+    font: 400 22px "Montserrat", sans-serif;
+  }
+
+  .side {
+
+  }
+}

@@ -1,17 +1,5 @@
 @use "variables.scss";
 
-@mixin mobileS {
-  @media screen and (max-width: $mobileS) {
-    @content;
-  }
-}
-
-@mixin navbar_overflow {
-  @media screen and (max-width: variables.$navbar_overflow) {
-    @content;
-  }
-}
-
 @mixin footer_overflow {
   @media screen and (max-width: variables.$footer_overflow) {
     @content;
@@ -24,20 +12,14 @@
   }
 }
 
+@mixin header_overflow2 {
+  @media screen and (max-width: variables.$header_overflow2) {
+    @content;
+  }
+}
+
 @mixin footer_overflow2 {
   @media screen and (max-width: variables.$footer_overflow2) {
-    @content;
-  }
-}
-
-@mixin main {
-  @media screen and (max-width: variables.$main) {
-    @content;
-  }
-}
-
-@mixin fourK {
-  @media screen and (max-width: $fourK) {
     @content;
   }
 }

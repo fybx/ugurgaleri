@@ -2,28 +2,36 @@
 @use "../mixins.scss";
 
 #header {
+  // Height is set in main.scss
   background: variables.$clr_header;
+  padding: 0 variables.$px_headerPadding;
+  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  @include mixins.navbar_overflow {
-    flex-direction: column;
+  @include mixins.header_overflow2 {
+    padding: 0 variables.$px_headerPadding2;
   }
 
   #logo {
+    height: 56px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    margin-left: variables.$innerContainerMargin;
-    color: variables.$clr_logo
+
+    color: variables.$clr_logo;
+
+    @include mixins.header_overflow2 {
+      height: 36px;
+    }
   }
 
   .navbar {
     display: flex;
 
     .nav-item {
-      margin-right: variables.$innerContainerMargin;
+      margin-right: 1vw;
       font: 18px "Montserrat", sans-serif;
       font-weight: 600;
       color: variables.$clr_nav_sleep;
@@ -33,10 +41,8 @@
         color: variables.$clr_nav_active;
       }
 
-      @include mixins.navbar_overflow {
-        &:last-of-type {
-          margin-right: 0;
-        }
+      &:last-of-type {
+        margin-right: 0;
       }
 
       @include mixins.header_overflow {
@@ -47,7 +53,7 @@
 
   .menu {
     display: none;
-    margin-right: variables.$innerContainerMargin;
+    filter: invert(1);
 
     @include mixins.header_overflow {
       display: block;

@@ -8,7 +8,7 @@
   justify-content: flex-start;
   flex-direction: row;
   align-items: flex-start;
-  padding: variables.$innerContainerMargin;
+  padding: variables.$px_headerPadding;
 
   .footer-column {
     color: variables.$clr_footer_sleep;

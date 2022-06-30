@@ -1,5 +1,7 @@
 @use "variables.scss";
 @use "mixins.scss";
+@use "views/index.scss";
+@use "views/aydinlatma.scss";
 @use "partials/header.scss";
 @use "partials/footer.scss";
 
@@ -9,48 +11,36 @@ html, body {
   background-color: variables.$clr_sides;
 }
 
-#container {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 1700px 1fr;
-  grid-row-end: -1;
-  grid-auto-rows: 1fr;
-  grid-gap: 0;
-
-  @include mixins.main {
-    grid-template-columns: 0 1fr 0;
-    background: red;
-  }
-}
-
-#left {
-  grid-column: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.content_spacing {
+  padding: 0 variables.$px_contentPadding;
 }
 
 #header {
-  grid-column: 2;
-  grid-row: 1;
+  // Layout, details and children is set in partials/header.scss
+  height: 10vh;
+
+  @include mixins.header_overflow2 {
+    height: 5vh;
+  }
+}
+
+#container {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  overflow: auto;
 }
 
 #content {
-  background: aquamarine;
-  grid-column-start: 2;
-  grid-row-start: 2;
-
-  padding: variables.$innerContainerMargin;
+  background: whitesmoke;
+  grid-column-start: 1;
+  grid-row-start: 1;
   overflow-wrap: break-word;
 }
 
 #footer {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-#right {
-  grid-column: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-column: 1;
+  grid-row: 2;
 }

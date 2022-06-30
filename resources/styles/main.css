@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+.showcase {
+  position: relative;
+  background-image: none;
+  background-color: black;
+}
+.showcase img {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+}
+.showcase h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font: 800 128px "Montserrat", sans-serif;
+  color: #FFFFFF;
+}
+
+.group {
+  background-color: #FFFFFF;
+  padding: 10px 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.group-item {
+  display: flex;
+  flex-direction: column;
+}
+.group-item img {
+  max-width: 300px;
+  height: auto;
+}
+.group-item p {
+  font: 400 22px "Montserrat", sans-serif;
+}
+#header {
+  background: #FDFFFF;
+  padding: 0 150px;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 850px) {
+  #header {
+    padding: 0 50px;
+  }
+}
+#header #logo {
+  height: 56px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #FDFFFF;
+}
+@media screen and (max-width: 850px) {
+  #header #logo {
+    height: 36px;
+  }
+}
+#header .navbar {
+  display: flex;
+}
+#header .navbar .nav-item {
+  margin-right: 1vw;
+  font: 18px "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #706fff;
+  text-decoration: none;
+}
+#header .navbar .nav-item:hover {
+  color: #01003B;
+}
+#header .navbar .nav-item:last-of-type {
+  margin-right: 0;
+}
+@media screen and (max-width: 1200px) {
+  #header .navbar .nav-item {
+    display: none;
+  }
+}
+#header .menu {
+  display: none;
+  filter: invert(1);
+}
+@media screen and (max-width: 1200px) {
+  #header .menu {
+    display: block;
+  }
+}
+
+#footer {
+  background: #000000;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 150px;
+}
+#footer .footer-column {
+  color: #DFE8E8;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+}
+#footer .footer-column h2 {
+  font: 22px "Montserrat", sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1110px) {
+  #footer .footer-column h2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 880px) {
+  #footer .footer-column h2 {
+    font-size: 14px;
+  }
+}
+#footer .footer-column hr {
+  margin: 0 0 10px 0;
+  border: 1px dotted white;
+}
+#footer .footer-column a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0 5px 0;
+  font: 16px "Montserrat", sans-serif;
+  font-weight: 500;
+}
+#footer .footer-column a:hover {
+  color: #F5FFFF;
+}
+@media screen and (max-width: 1110px) {
+  #footer .footer-column a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 880px) {
+  #footer .footer-column a {
+    font-size: 8px;
+  }
+}
+#footer .footer-column .footer-social {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+}
+#footer .footer-column .footer-social img {
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  margin: 0 15px 0 0;
+}
+#footer .footer-column .footer-social:hover {
+  background: #F5FFFF;
+  color: black;
+}
+#footer .footer-column p {
+  font: 16px "Montserrat", sans-serif;
+  font-weight: 500;
+  color: inherit;
+  margin: 0;
+}
+@media screen and (max-width: 1110px) {
+  #footer .footer-column p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 880px) {
+  #footer .footer-column p {
+    font-size: 8px;
+  }
+}
+#footer .footer-column:last-of-type {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #364040;
+}
+
+.content_spacing {
+  padding: 0 200px;
+}
+
+#header {
+  height: 10vh;
+}
+@media screen and (max-width: 850px) {
+  #header {
+    height: 5vh;
+  }
+}
+
+#container {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  overflow: auto;
+}
+
+#content {
+  background: whitesmoke;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  overflow-wrap: break-word;
+}
+
+#footer {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/*# sourceMappingURL=main.css.map */
