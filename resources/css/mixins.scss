@@ -6,6 +6,12 @@
   }
 }
 
+@mixin footer_overflow2 {
+  @media screen and (max-width: variables.$footer_overflow2) {
+    @content;
+  }
+}
+
 @mixin header_overflow {
   @media screen and (max-width: variables.$header_overflow) {
     @content;
@@ -18,8 +24,14 @@
   }
 }
 
-@mixin footer_overflow2 {
-  @media screen and (max-width: variables.$footer_overflow2) {
+@mixin mx_content_fix {
+  @media screen and (max-width: variables.$content_fix) {
+    @content;
+  }
+}
+
+@mixin mx_content_fix2 {
+  @media screen and (max-width: variables.$content_fix2) {
     @content;
   }
 }

@@ -13,6 +13,14 @@ html, body {
 
 .content_spacing {
   padding: 0 variables.$px_contentPadding;
+
+  @include mixins.mx_content_fix {
+    padding: 0 variables.$px_contentPadding2;
+  }
+
+  @include mixins.mx_content_fix2 {
+    padding: 0 variables.$px_contentPadding3;
+  }
 }
 
 #header {
@@ -35,12 +43,17 @@ html, body {
 
 #content {
   background: whitesmoke;
-  grid-column-start: 1;
-  grid-row-start: 1;
+  grid-column: 1;
+  grid-row: 1;
   overflow-wrap: break-word;
 }
 
 #footer {
   grid-column: 1;
   grid-row: 2;
+}
+
+#footer-stateless {
+  grid-column: 1;
+  grid-row: 3;
 }

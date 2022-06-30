@@ -2,95 +2,66 @@
 @use "../mixins.scss";
 
 #footer {
-  background: variables.$clr_footer;
-  margin: 0;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: variables.$px_headerPadding;
+  justify-content: space-between;
+  background-color: variables.$clr_footerBackground;
+  font: 16px "Montserrat", sans-serif;
+  padding: 50px variables.$px_contentPadding;
 
-  .footer-column {
-    color: variables.$clr_footer_sleep;
+  #small-logo {
+    height: 50px;
+    width: auto;
+  }
+
+  .footer-columns {
     display: flex;
-    flex-direction: column;
-    margin: 0 20px 0 0;
 
-    h2 {
-      font: variables.$sz_l_footer_h "Montserrat", sans-serif;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 0;
+    .footer-column {
+      margin: variables.$px_contentPadding / 10;
 
-      @include mixins.footer_overflow {
-        font-size: variables.$sz_m_footer_h;
+      h1 {
+        margin: 0 0 16px 0;
+        font: 700 18px "Montserrat", sans-serif;
+        color: variables.$clr_footerSleepHigh;
       }
 
-      @include mixins.footer_overflow2 {
-        font-size: variables.$sz_s_footer_h;
-      }
-    }
+      a {
+        text-decoration: none;
+        color: variables.$clr_footerSleepLow;
 
-    hr {
-      margin: 0 0 10px 0;
-      border: 1px dotted white;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      margin: 0 0 5px 0;
-      font: 16px "Montserrat", sans-serif;
-      font-weight: 500;
-
-      &:hover {
-        color: variables.$clr_footer_active;
+        &:hover {
+          font-size: 17px;
+          color: variables.$clr_footerActive;
+        }
       }
 
-      @include mixins.footer_overflow {
-        font-size: variables.$sz_m_footer_p;
-      }
-
-      @include mixins.footer_overflow2 {
-        font-size: variables.$sz_s_footer_p;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
       }
     }
+  }
+}
 
-    .footer-social {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 5px;
+#footer-stateless {
+  display: flex;
+  justify-content: space-between;
+  background-color: variables.$clr_brand;
+  color: white;
+  font: 14px "Montserrat", sans-serif;
 
-      img {
-        border-radius: 10px;
-        width: 35px;
-        height: 35px;
-        margin: 0 15px 0 0;
-      }
+  a {
+    color: white;
+    text-decoration: none;
 
-      &:hover {
-        background: variables.$clr_footer_active;
-        color: black;
-      }
+    &:hover {
+      font-style: italic;
     }
+  }
 
-    p {
-      font: 16px "Montserrat", sans-serif;
-      font-weight: 500;
-      color: inherit;
-      margin: 0;
-
-      @include mixins.footer_overflow {
-        font-size: variables.$sz_m_footer_p;
-      }
-
-      @include mixins.footer_overflow2 {
-        font-size: variables.$sz_s_footer_p;
-      }
-    }
-
-    &:last-of-type {
-      margin: 0;
-    }
+  .smaller {
+    font-weight: 200;
+    font-size: 12px;
   }
 }
