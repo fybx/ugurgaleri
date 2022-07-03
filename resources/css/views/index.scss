@@ -1,10 +1,15 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
+$table-item_img_width: 100px;
+$table-item_margin_between_items: 10px;
+$table-item_margin_img_to_paragraph: 10px;
+
 .showcase {
-  position: relative;
-  background-image: none;
-  background-color: black;
+  display: flex;
+  height: 100vh;
+  background-image: url("../../resources/img/showcase.jpg");
+  backdrop-filter: brightness(0%);
 
   img {
     width: 100%;
@@ -13,38 +18,49 @@
   }
 
   h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-
+    text-align: center;
     font: 800 128px "Montserrat", sans-serif;
     color: #FFFFFF;
   }
 }
 
-.group {
-  background-color: #FFFFFF;
-  padding: 10px variables.$px_contentPadding;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.group-item {
+.table {
   display: flex;
   flex-direction: column;
-  img {
-    max-width: 300px;
-    height: auto;
+
+  .table-item {
+    margin-top: $table-item_margin_between_items;
+    display: inline-flex;
+    flex-direction: row;
+
+    img {
+      margin-right: $table-item_margin_img_to_paragraph;
+      height: $table-item_img_width;
+      width: $table-item_img_width;
+    }
   }
 
-  p {
-    font: 400 22px "Montserrat", sans-serif;
+  .reverse {
+    flex-direction: row-reverse;
+
+    img {
+      margin-right: 0;
+      margin-left: $table-item_margin_img_to_paragraph;
+    }
+
+    p {
+      text-align: right;
+    }
+
+    .vertical-separator {
+      margin-right: 0;
+      margin-left: $table-item_margin_img_to_paragraph;
+    }
   }
 
-  .side {
-
+  .vertical-separator {
+    height: $table-item_img_width + 20px;
+    border: solid 1px variables.$clr_brand;
+    margin-right: $table-item_margin_img_to_paragraph;
   }
 }
