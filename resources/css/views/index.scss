@@ -3,7 +3,7 @@
 
 $table-item_img_width: 100px;
 $table-item_margin_between_items: 10px;
-$table-item_margin_img_to_paragraph: 10px;
+$table-item_margin_img_to_paragraph: 100px;
 
 .showcase {
   display: flex;
@@ -32,10 +32,11 @@ $table-item_margin_img_to_paragraph: 10px;
     margin-top: $table-item_margin_between_items;
     display: inline-flex;
     flex-direction: row;
+    align-items: center;
 
     img {
       margin-right: $table-item_margin_img_to_paragraph;
-      height: $table-item_img_width;
+      height: auto;
       width: $table-item_img_width;
     }
   }
@@ -62,5 +63,73 @@ $table-item_margin_img_to_paragraph: 10px;
     height: $table-item_img_width + 20px;
     border: solid 1px variables.$clr_brand;
     margin-right: $table-item_margin_img_to_paragraph;
+  }
+
+  .square {
+    img {
+      height: $table-item_img_width;
+    }
+  }
+
+  .table-item-animation {
+    animation: slide-in-left 3000ms;
+  }
+
+  .table-item-animation-reverse {
+    animation: slide-in-right 3000ms;
+  }
+
+  @keyframes fade-in {
+    from {
+      margin-left: 10%;
+      width: 105%;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-reverse {
+    from {
+      margin-right: 10%;
+      width: 105%;
+      opacity: 0;
+    }
+
+    to {
+      margin-right: 0;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      margin-left: 100%;
+      width: 300%;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0;
+      width: 100%;
+      opacity: 1;
+    }
   }
 }
