@@ -4,6 +4,7 @@
 @use "views/aydinlatma.scss";
 @use "partials/header.scss";
 @use "partials/footer.scss";
+@use "sass:math";
 
 html, body {
   margin: 0;
@@ -11,16 +12,22 @@ html, body {
   background-color: variables.$clr_sides;
 }
 
-.content_spacing {
-  padding: 0 variables.$px_contentPadding;
+.content-spacing {
+  padding: math.div(variables.$px_horizontalPadding, 2) variables.$px_horizontalPadding;
 
-  @include mixins.mx_content_fix {
-    padding: 0 variables.$px_contentPadding2;
+  @include mixins.mx_index_brands_fix {
+    padding: math.div(variables.$px_horizontalPadding2, 2) variables.$px_horizontalPadding2;
   }
 
-  @include mixins.mx_content_fix2 {
-    padding: 0 variables.$px_contentPadding3;
+  @include mixins.mx_index_brands_fix2 {
+    padding: math.div(variables.$px_horizontalPadding3, 2) variables.$px_horizontalPadding3;
   }
+}
+
+.ignore-vertical {
+  // ignores vertical padding applied by .content-spacing
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #header {

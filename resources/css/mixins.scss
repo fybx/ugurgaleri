@@ -24,14 +24,14 @@
   }
 }
 
-@mixin mx_content_fix {
-  @media screen and (max-width: variables.$content_fix) {
+@mixin mx_index_brands_fix {
+  @media screen and (max-width: variables.$index_brands_fix) {
     @content;
   }
 }
 
-@mixin mx_content_fix2 {
-  @media screen and (max-width: variables.$content_fix2) {
+@mixin mx_index_brands_fix2 {
+  @media screen and (max-width: variables.$index_brands_fix2) {
     @content;
   }
 }

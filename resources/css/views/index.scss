@@ -1,9 +1,12 @@
 @use "../variables.scss";
 @use "../mixins.scss";
+@use "sass:math";
 
 $table-item_img_width: 100px;
 $table-item_margin_between_items: 10px;
-$table-item_margin_img_to_paragraph: 100px;
+
+$social-button_img_width: 24px;
+$social-button_inner_margin: 10px;
 
 .showcase {
   display: flex;
@@ -35,18 +38,56 @@ $table-item_margin_img_to_paragraph: 100px;
     align-items: center;
 
     img {
-      margin-right: $table-item_margin_img_to_paragraph;
+      margin-right: math.div(variables.$px_horizontalPadding, 10);
       height: auto;
       width: $table-item_img_width;
+
+      @include mixins.mx_index_brands_fix {
+        margin-right: math.div(variables.$px_horizontalPadding2, 10);
+      }
+
+      @include mixins.mx_index_brands_fix2 {
+        margin-right: math.div(variables.$px_horizontalPadding2, 10);
+      }
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .vertical-separator {
+    // vertical-separator makes an empty div behave as a separator which aligned vertically
+    height: $table-item_img_width + 20px;
+    border: solid 1px variables.$clr_brand;
+    margin-right: 9 * math.div(variables.$px_horizontalPadding, 10);
+
+    @include mixins.mx_index_brands_fix {
+      margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
+    }
+
+    @include mixins.mx_index_brands_fix2 {
+      margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
     }
   }
 
   .reverse {
+    // reverse is a property given to .table-item elements
+    // it contains styling for img, p and .vertical-separator elements contained under
+    // a .table-item element
     flex-direction: row-reverse;
 
     img {
       margin-right: 0;
-      margin-left: $table-item_margin_img_to_paragraph;
+      margin-left: math.div(variables.$px_horizontalPadding, 10);;
+
+      @include mixins.mx_index_brands_fix {
+        margin-left: math.div(variables.$px_horizontalPadding2, 10);
+      }
+
+      @include mixins.mx_index_brands_fix2 {
+        margin-left: math.div(variables.$px_horizontalPadding2, 10);
+      }
     }
 
     p {
@@ -55,14 +96,16 @@ $table-item_margin_img_to_paragraph: 100px;
 
     .vertical-separator {
       margin-right: 0;
-      margin-left: $table-item_margin_img_to_paragraph;
-    }
-  }
+      margin-left: 9 * math.div(variables.$px_horizontalPadding, 10);;
 
-  .vertical-separator {
-    height: $table-item_img_width + 20px;
-    border: solid 1px variables.$clr_brand;
-    margin-right: $table-item_margin_img_to_paragraph;
+      @include mixins.mx_index_brands_fix {
+        margin-left: 9 * math.div(variables.$px_horizontalPadding2, 10);
+      }
+
+      @include mixins.mx_index_brands_fix2 {
+        margin-left: 9 * math.div(variables.$px_horizontalPadding2, 10);
+      }
+    }
   }
 
   .square {
@@ -72,44 +115,16 @@ $table-item_margin_img_to_paragraph: 100px;
   }
 
   .table-item-animation {
-    animation: slide-in-left 3000ms;
-  }
-
-  .table-item-animation-reverse {
     animation: slide-in-right 3000ms;
   }
 
-  @keyframes fade-in {
-    from {
-      margin-left: 10%;
-      width: 105%;
-      opacity: 0;
-    }
-
-    to {
-      margin-left: 0;
-      width: 100%;
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade-in-reverse {
-    from {
-      margin-right: 10%;
-      width: 105%;
-      opacity: 0;
-    }
-
-    to {
-      margin-right: 0;
-      width: 100%;
-      opacity: 1;
-    }
+  .table-item-animation-reverse {
+    animation: slide-in-left 3000ms;
   }
 
   @keyframes slide-in-left {
     from {
-      transform: translateX(-100%);
+      transform: translateX(-5%);
       opacity: 0;
     }
 
@@ -121,15 +136,48 @@ $table-item_margin_img_to_paragraph: 100px;
 
   @keyframes slide-in-right {
     from {
-      margin-left: 100%;
-      width: 300%;
+      transform: translateX(+5%);
       opacity: 0;
     }
 
     to {
-      margin-left: 0;
-      width: 100%;
+      transform: translateX(0%);
       opacity: 1;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: variables.$clr_brand;
+  color: white;
+
+  p {
+    font: 700 $social-button_img_width "Montserrat", sans-serif;
+  }
+
+  .social-button {
+    display: inline-block;
+    height: $social-button_img_width + (2 * $social-button_inner_margin);
+    width: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    img {
+      margin: 10px;
+      height: $social-button_img_width;
+      width: $social-button_img_width;
+    }
+
+    &:hover {
+      background-color: white;
+
+      img {
+        filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(2311%) hue-rotate(197deg) brightness(87%) contrast(88%);
+      }
     }
   }
 }
