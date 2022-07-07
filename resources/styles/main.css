@@ -142,6 +142,7 @@
   width: auto;
   border: 2px solid white;
   border-radius: 50%;
+  margin: 0 10px 0 0;
 }
 .social .social-button img {
   margin: 10px;
@@ -153,6 +154,9 @@
 }
 .social .social-button:hover img {
   filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(2311%) hue-rotate(197deg) brightness(87%) contrast(88%);
+}
+.social .social-button:last-of-type {
+  margin: 0;
 }
 
 #header {
@@ -379,6 +383,10 @@ html, body {
   display: flex;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 #header {
   height: 10vh;
 }
@@ -400,7 +408,6 @@ html, body {
   align-items: center;
 }
 .dropdown .dropdown-nav-item {
-  display: inline-block;
   position: relative;
   margin-top: 50px;
   background: -webkit-linear-gradient(#FFFFFF, #adf0ff);
@@ -408,6 +415,8 @@ html, body {
   -webkit-text-fill-color: transparent;
   font: 600 28px "Montserrat", sans-serif;
   text-decoration: none;
+  -webkit-animation: navbar-appear 550ms;
+  animation: navbar-appear 550ms;
 }
 .dropdown .dropdown-nav-item:first-of-type {
   margin-top: 100px;
@@ -432,6 +441,11 @@ html, body {
 .dropdown_close_animation {
   -webkit-animation: drawer-close 550ms;
   animation: drawer-close 550ms;
+}
+
+.dropdown-nav-item_close_animation {
+  -webkit-animation: navbar-disappear 550ms;
+  animation: navbar-disappear 550ms;
 }
 
 @-webkit-keyframes drawer-close {
@@ -476,6 +490,50 @@ html, body {
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes navbar-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes navbar-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes navbar-disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes navbar-disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 #container {
