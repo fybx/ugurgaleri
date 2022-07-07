@@ -130,7 +130,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #1d60b5;
+  background: linear-gradient(to left, #1d60b5, #3b8fff);
   color: white;
 }
 .social p {
@@ -206,6 +206,7 @@
   width: 36px;
   height: 36px;
   position: relative;
+  cursor: pointer;
 }
 #header .dropdown-toggle .bar {
   padding: 0;
@@ -390,23 +391,93 @@ html, body {
 .dropdown {
   position: fixed;
   z-index: 2;
-  background-color: #706fff;
-  width: 100vw;
+  background: linear-gradient(to left bottom, #1d60b5, #003e86);
+  width: 100%;
   height: 90vh;
-  animation: slide-in-right 550ms;
+  -webkit-animation: drawer-open 550ms;
+  animation: drawer-open 550ms;
   flex-direction: column;
   align-items: center;
 }
 .dropdown .dropdown-nav-item {
-  color: white;
+  display: inline-block;
+  position: relative;
+  margin-top: 50px;
+  background: -webkit-linear-gradient(#FFFFFF, #adf0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font: 600 28px "Montserrat", sans-serif;
   text-decoration: none;
 }
-
-.dropdown_close_animation {
-  animation: 550ms slide-in-left;
+.dropdown .dropdown-nav-item:first-of-type {
+  margin-top: 100px;
+}
+.dropdown .dropdown-nav-item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, #FFF, #AFF);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.dropdown .dropdown-nav-item:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
+.dropdown_close_animation {
+  -webkit-animation: drawer-close 550ms;
+  animation: drawer-close 550ms;
+}
+
+@-webkit-keyframes drawer-close {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes drawer-close {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@-webkit-keyframes drawer-open {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes drawer-open {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 #container {
   height: 90vh;
   display: grid;

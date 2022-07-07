@@ -152,7 +152,7 @@ $social-button_inner_margin: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: variables.$clr_brand;
+  background: linear-gradient(to left, variables.$clr_brand, #3b8fff);
   color: white;
 
   p {

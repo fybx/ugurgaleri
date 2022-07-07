@@ -68,6 +68,7 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
     width: $dropdown-toggle_l_width;
     height: $dropdown-toggle_l_width;
     position: relative;
+    cursor: pointer;
 
     .bar {
       padding: 0;
