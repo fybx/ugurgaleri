@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta name="description" content="Uğur Galeri">
+    <script src="resources/scripts/main.js" defer></script>
     <script src="resources/scripts/index.js" defer></script>
     <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <title>Uğur Galeri</title>
@@ -18,8 +20,24 @@
             <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
             <a class="nav-item" href="iletisim.html">İletişim</a>
         </nav>
-        <a class="menu"><img alt="Menu" src="resources/img/menu-white.png"></a>
+
+        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
+        <label for="toggle" id="toggle-label">
+            <div class="dropdown-toggle">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
     </header>
+    <nav class="dropdown hidden dropdown-navbar">
+        <a class="dropdown-nav-item" href="index.html">Ana sayfa</a>
+        <a class="dropdown-nav-item" href="hakkimizda.html">Hakkımızda</a>
+        <a class="dropdown-nav-item" href="#brands">Markalar</a>
+        <a class="dropdown-nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+        <a class="dropdown-nav-item" href="iletisim.html">İletişim</a>
+    </nav>
     <div id="container">
         <div id="content">
             <div class="showcase content-spacing">
@@ -29,17 +47,17 @@
                 <div class="table-item square">
                     <img src="resources/img/ugurgaleri-utek.png">
                     <div class="vertical-separator"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores blanditiis doloremque eum labore laborum, mollitia nulla odit optio possimus quisquam tempora tenetur voluptatem. Atque cumque fugit harum maiores, necessitatibus nemo perspiciatis quos recusandae saepe sapiente, soluta totam vitae voluptate! Illum inventore ipsa mollitia, nihil odio optio rem. Blanditiis earum fugit nisi quas rem voluptates voluptatibus. Ad aut corporis cupiditate, deserunt dignissimos dolorem error esse excepturi expedita, illum impedit ipsum laudantium minima nostrum odio officia omnis perferendis porro, quae quaerat quasi quia ratione rem reprehenderit sapiente tempora ut voluptatibus? Amet dolores ducimus est fugiat incidunt odit quo, rerum soluta veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consequuntur debitis deleniti dolore dolorum eligendi expedita harum impedit inventore itaque iusto neque odio odit quia recusandae, repudiandae saepe voluptas voluptates. Accusantium atque cum, debitis, delectus dignissimos ea error fuga fugit labore maiores nam nulla numquam soluta, suscipit vel veritatis voluptatibus!</p>
                 </div>
                 <div class="table-item reverse">
                     <img src="resources/img/UKT/UKT.png">
                     <div class="vertical-separator"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores blanditiis doloremque eum labore laborum, mollitia nulla odit optio possimus quisquam tempora tenetur voluptatem. Atque cumque fugit harum maiores, necessitatibus nemo perspiciatis quos recusandae saepe sapiente, soluta totam vitae voluptate! Illum inventore ipsa mollitia, nihil odio optio rem. Blanditiis earum fugit nisi quas rem voluptates voluptatibus. Ad aut corporis cupiditate, deserunt dignissimos dolorem error esse excepturi expedita, illum impedit ipsum laudantium minima nostrum odio officia omnis perferendis porro, quae quaerat quasi quia ratione rem reprehenderit sapiente tempora ut voluptatibus? Amet dolores ducimus est fugiat incidunt odit quo, rerum soluta veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aut, consectetur consequuntur culpa dolorum ducimus eaque eligendi enim eveniet fugiat illum laborum maiores mollitia obcaecati odio perspiciatis, quae tempora! Ex nemo nulla similique sint!</p>
                 </div>
                 <div class="table-item">
-                    <img src="resources/img/ugurgaleri-utek.png">
+                    <img src="resources/img/galericilerden.com/galericilerden.jpg">
                     <div class="vertical-separator"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores blanditiis doloremque eum labore laborum, mollitia nulla odit optio possimus quisquam tempora tenetur voluptatem. Atque cumque fugit harum maiores, necessitatibus nemo perspiciatis quos recusandae saepe sapiente, soluta totam vitae voluptate! Illum inventore ipsa mollitia, nihil odio optio rem. Blanditiis earum fugit nisi quas rem voluptates voluptatibus. Ad aut corporis cupiditate, deserunt dignissimos dolorem error esse excepturi expedita, illum impedit ipsum laudantium minima nostrum odio officia omnis perferendis porro, quae quaerat quasi quia ratione rem reprehenderit sapiente tempora ut voluptatibus? Amet dolores ducimus est fugiat incidunt odit quo, rerum soluta veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, dolor dolorem earum enim est et libero minima ratione, recusandae repellat temporibus tenetur totam unde voluptatem voluptatum? Asperiores atque consectetur distinctio eum fugit nisi non officiis, praesentium recusandae tempora veniam voluptate.</p>
                 </div>
             </div>
             <div id="social" class="social content-spacing">

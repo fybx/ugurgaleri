@@ -1,5 +1,17 @@
 @use "../variables.scss";
 @use "../mixins.scss";
+@use "sass:math";
+
+$dropdown-toggle_l_width_no_unit: 36;
+$dropdown-toggle_s_width_no_unit: 28;
+
+$dropdown-toggle_l_width: $dropdown-toggle_l_width_no_unit * 1px;
+$dropdown-toggle_l_cross_width: math.floor(math.sqrt(2 * math.pow($dropdown-toggle_l_width_no_unit, 2))) * 1px;
+$dropdown-toggle_l_second_bar: math.div($dropdown-toggle_l_width - 4, 2);
+$dropdown-toggle_s_width: $dropdown-toggle_s_width_no_unit * 1px;
+$dropdown-toggle_s_cross_width: math.floor(math.sqrt(2 * math.pow($dropdown-toggle_s_width_no_unit, 2))) * 1px;
+$dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
+
 
 #header {
   // Height is set in main.scss
@@ -47,23 +59,100 @@
     }
   }
 
-  .menu {
+  #toggle {
     display: none;
-    filter: invert(1);
-    height: 56px;
-    width: auto;
+  }
 
-    img {
-      height: 56px;
-      width: auto;
+  .dropdown-toggle {
+    margin: 0 auto 0;
+    width: $dropdown-toggle_l_width;
+    height: $dropdown-toggle_l_width;
+    position: relative;
+
+    .bar {
+      padding: 0;
+      width: $dropdown-toggle_l_width;
+      height: 4px;
+      background-color: variables.$clr_brand;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.4s ease-in-out;
+      position: absolute;
+    }
+
+    .bar1 {
+      transform-origin: 5%;
+    }
+
+    .bar4 {
+      transform-origin: 5%;
     }
 
     @include mixins.header_overflow2 {
-      img {
-        height: 36px;
+      width: $dropdown-toggle_s_width;
+      height: $dropdown-toggle_s_width;
+
+      .bar {
+        width: $dropdown-toggle_s_width;
       }
-      height: 36px;
     }
+  }
+
+  .bar1 {
+    top: 0;
+  }
+
+  .bar2,
+  .bar3 {
+    top: $dropdown-toggle_l_second_bar;
+
+    @include mixins.header_overflow2 {
+      top: $dropdown-toggle_s_second_bar;
+    }
+  }
+
+  .bar3 {
+    right: 0;
+  }
+
+  .bar4 {
+    bottom: 0;
+  }
+
+  .toggle:checked + label > .dropdown-toggle > .bar1{
+    transform: rotate(45deg);
+    height: 3px;
+    width: $dropdown-toggle_l_cross_width;
+
+    @include mixins.header_overflow2 {
+      width: $dropdown-toggle_s_cross_width;
+    }
+  }
+
+  .toggle:checked + label > .dropdown-toggle > .bar3{
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+  }
+
+  .toggle:checked + label > .dropdown-toggle > .bar2{
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
+  }
+
+  .toggle:checked + label > .dropdown-toggle > .bar4{
+    transform: rotate(-45deg);
+    height: 3px;
+    width: $dropdown-toggle_l_cross_width;
+
+    @include mixins.header_overflow2 {
+      width: $dropdown-toggle_s_cross_width;
+    }
+  }
+
+  #toggle-label {
+    display: none;
 
     @include mixins.header_overflow {
       display: block;

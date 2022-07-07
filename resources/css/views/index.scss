@@ -67,7 +67,7 @@ $social-button_inner_margin: 10px;
     }
 
     @include mixins.mx_index_brands_fix2 {
-      margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
+      margin-right: 9 * math.div(variables.$px_horizontalPadding3, 10);
     }
   }
 
@@ -86,7 +86,7 @@ $social-button_inner_margin: 10px;
       }
 
       @include mixins.mx_index_brands_fix2 {
-        margin-left: math.div(variables.$px_horizontalPadding2, 10);
+        margin-left: math.div(variables.$px_horizontalPadding3, 10);
       }
     }
 
@@ -103,7 +103,7 @@ $social-button_inner_margin: 10px;
       }
 
       @include mixins.mx_index_brands_fix2 {
-        margin-left: 9 * math.div(variables.$px_horizontalPadding2, 10);
+        margin-left: 9 * math.div(variables.$px_horizontalPadding3, 10);
       }
     }
   }

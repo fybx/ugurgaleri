@@ -30,6 +30,14 @@ html, body {
   padding-bottom: 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
 #header {
   // Layout, details and children is set in partials/header.scss
   height: 10vh;
@@ -37,6 +45,27 @@ html, body {
   @include mixins.header_overflow2 {
     height: 5vh;
   }
+}
+
+.dropdown {
+  position: fixed;
+  z-index: 2;
+  background-color: #706fff;
+  width: 100vw;
+  height: 90vh;
+  animation: slide-in-right 550ms;
+  flex-direction: column;
+  align-items: center;
+
+  .dropdown-nav-item {
+    color: white;
+    font: 600 28px "Montserrat", sans-serif;
+    text-decoration: none;
+  }
+}
+
+.dropdown_close_animation {
+  animation: 550ms slide-in-left;
 }
 
 #container {
