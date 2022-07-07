@@ -437,6 +437,11 @@ html, body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+@media screen and (max-width: 850px) {
+  .dropdown {
+    height: 95vh;
+  }
+}
 
 .dropdown_close_animation {
   -webkit-animation: drawer-close 550ms;
@@ -543,6 +548,11 @@ html, body {
   grid-template-columns: 1fr;
   grid-gap: 0;
   overflow: auto;
+}
+@media screen and (max-width: 850px) {
+  #container {
+    height: 95vh;
+  }
 }
 
 #content {

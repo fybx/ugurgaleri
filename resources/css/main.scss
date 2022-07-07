@@ -95,6 +95,10 @@ html, body {
       transform-origin: bottom left;
     }
   }
+
+  @include mixins.header_overflow2 {
+    height: 95vh;
+  }
 }
 
 .dropdown_close_animation {
@@ -214,6 +218,10 @@ html, body {
   grid-template-columns: 1fr;
   grid-gap: 0;
   overflow: auto;
+
+  @include mixins.header_overflow2 {
+    height: 95vh;
+  }
 }
 
 #content {
