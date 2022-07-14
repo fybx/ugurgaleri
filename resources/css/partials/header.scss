@@ -28,10 +28,35 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
   }
 
   #logo {
+    display: flex;
+    align-items: center;
     height: 56px;
 
     @include mixins.header_overflow2 {
       height: 36px;
+    }
+  }
+
+  .bounce-animation {
+    span {
+      font: 600 56px 'Oswald', sans-serif;
+      display: inline-block;
+      color: variables.$clr_brand;
+      animation: bounce 2500ms infinite;
+      animation-delay: calc(.1s * var(--i));
+
+      @include mixins.header_overflow2 {
+        font-size: 36px;
+      }
+    }
+  }
+
+  @keyframes bounce {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-5px)
     }
   }
 

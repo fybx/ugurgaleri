@@ -9,6 +9,8 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
+
+
 let targets = document.querySelectorAll('.table-item');
 targets.forEach(target => {
     observer.observe(target);

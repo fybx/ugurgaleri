@@ -11,20 +11,11 @@ $social-button_inner_margin: 10px;
 .showcase {
   display: flex;
   height: 100vh;
-  background-image: url("../../resources/img/showcase.jpg");
+  background-image: url("../../resources/img/index/g.jpg"), url("../../resources/img/index/y.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   backdrop-filter: brightness(0%);
-
-  img {
-    width: 100%;
-    height: auto;
-    filter: brightness(50%);
-  }
-
-  h1 {
-    text-align: center;
-    font: 800 128px "Montserrat", sans-serif;
-    color: #FFFFFF;
-  }
 }
 
 .table {
