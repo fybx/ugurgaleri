@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta name="description" content="Uğur Galeri">
+    <meta name="description" content="Kişisel Verilerin Korunması Kanunu hakkında aydınlatma metni.">
     <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
-    <title>KVKK Aydınlatma Metni</title>
+    <title>KVKK Aydınlatma Metni | Uğur Galeri</title>
+    <script src="resources/scripts/main.js" defer></script>
 </head>
 <body>
 <header id="header">
-    <img id="logo" src="resources/img/ugurgaleri-yazıtek.png" alt="Uğur Galeri logosu">
+    <div id="logo" class="bounce-animation">
+        <span style="--i: 1;">U</span>
+        <span style="--i: 2;">Ğ</span>
+        <span style="--i: 3;">U</span>
+        <span style="--i: 4;">R</span>
+        <span style="--i: 4;">&nbsp;</span>
+        <span style="--i: 5;">G</span>
+        <span style="--i: 6;">A</span>
+        <span style="--i: 7;">L</span>
+        <span style="--i: 8;">E</span>
+        <span style="--i: 9;">R</span>
+        <span style="--i: 10;">İ</span>
+    </div>
     <nav class="navbar">
         <a class="nav-item" href="index.html">Ana sayfa</a>
         <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
-        <a class="nav-item" href="#brands">Markalar</a>
+        <a class="nav-item" href="index.html#brands">Markalar</a>
         <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
         <a class="nav-item" href="iletisim.html">İletişim</a>
     </nav>
-    <a class="menu"><img alt="Menu" src="resources/img/menu-white.png"></a>
+
+    <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
+    <label for="toggle" id="toggle-label">
+        <div class="dropdown-toggle">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+        </div>
+    </label>
 </header>
+<nav class="dropdown hidden dropdown-navbar">
+    <a class="dropdown-nav-item hidden" href="index.html">Ana sayfa</a>
+    <a class="dropdown-nav-item hidden" href="hakkimizda.html">Hakkımızda</a>
+    <a class="dropdown-nav-item hidden" href="index.html#brands">Markalar</a>
+    <a class="dropdown-nav-item hidden" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+    <a class="dropdown-nav-item hidden" href="iletisim.html">İletişim</a>
+</nav>
 <div id="container">
     <div id="content" class="content-spacing">
         <h1>Kişisel Verilerin Korunması Kanunu Aydınlatma Metni</h1>
@@ -302,47 +331,34 @@
             hakkında ilgili kişilere web sitesi üzerinden gerekli bilgilendirmeler yapılır.</p>
 
     </div>
-    <footer id="footer">
-        <div class="footer-column">
-            <h2>Uğur Galeri</h2>
-            <hr>
-            <a class="nav-item" href="index.html">Ana sayfa</a>
-            <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
-            <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
-            <a class="nav-item" href="iletisim.html">İletişim</a>
+    <footer id="footer" class="content-spacing">
+        <img id="small-logo" src="resources/img/Uğur%20Galeri/footer-white.png" alt="Uğur Galeri U logosu">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h1>Uğur Galeri</h1>
+                <ul>
+                    <li><a href="index.html">Ana sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="index.html#brands">Markalarımız</a></li>
+                    <li><a href="https://ugurgaleri1.sahibinden.com">Araçlarımız</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h1>Kurumsal</h1>
+                <ul>
+                    <li><a href="hakkimizda.html#misyon">Misyonumuz</a></li>
+                    <li><a href="hakkimizda.html#vizyon">Vizyonumuz</a></li>
+                    <li><a href="hakkimizda.html#yonetim">Yönetim</a></li>
+                    <li><a href="aydinlatma.html">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="kamera.html">Kamera Kullanımı</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-column">
-            <h2>Kurumsal</h2>
-            <hr>
-            <a>Misyonumuz</a>
-            <a>Vizyonumuz</a>
-            <a>Yönetim</a>
-            <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>
-            <a href="kamera.html">KVKK Kamera Kullanımı</a>
-        </div>
-        <div class="footer-column">
-            <h2>Sosyal Medyada Biz</h2>
-            <hr>
-            <a class="footer-social" href="https://www.arabam.com/galeri/yavuz-ugur-galeri">
-                <img src="resources/img/arabam.jpg" alt="arabam.com logosu">
-            </a>
-            <a class="footer-social" href="https://ugurgaleri1.sahibinden.com/">
-                <img src="resources/img/sahibinden.png" alt="sahibinden.com logosu">
-            </a>
-            <a class="footer-social" href="https://www.facebook.com/ugurgalerikaracabey/">
-                <img src="resources/img/facebook.svg" alt="facebook.com logosu">
-            </a>
-            <a class="footer-social" href="https://www.instagram.com/ugurgaleri/">
-                <img src="resources/img/instagram.png" alt="instagram.com logosu">
-            </a>
-        </div>
-        <div class="footer-column">
-            <h2>İletişim</h2>
-            <hr>
-            <a href="tel:+902246718380">Sabit Hat: 0224 671 83 80</a>
-            <a href="tel:+905325668216">Cep Telefonu: 0532 566 82 16</a>
-            <a href="https://goo.gl/maps/oy2ZXFKB9nWmn7498">Sırabademler Mah., Kümeevler, 16100 Karacabey/BURSA</a>
-        </div>
+    </footer>
+    <footer id="footer-stateless" class="content-spacing ignore-vertical">
+        <p>&copy; Uğur Galeri 2022</p>
+        <p class="smaller">Dizayn & Uygulama: <a href="https://fybx.dev">fybx.dev</a></p>
     </footer>
 </div>
 </body>

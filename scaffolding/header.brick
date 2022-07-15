@@ -1,0 +1,39 @@
+    <header id="header">
+        <div id="logo" class="bounce-animation">
+            <span style="--i: 1;">U</span>
+            <span style="--i: 2;">Ğ</span>
+            <span style="--i: 3;">U</span>
+            <span style="--i: 4;">R</span>
+            <span style="--i: 4;">&nbsp;</span>
+            <span style="--i: 5;">G</span>
+            <span style="--i: 6;">A</span>
+            <span style="--i: 7;">L</span>
+            <span style="--i: 8;">E</span>
+            <span style="--i: 9;">R</span>
+            <span style="--i: 10;">İ</span>
+        </div>
+        <nav class="navbar">
+            <a class="nav-item" href="index.html">Ana sayfa</a>
+            <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
+            <a class="nav-item" href="#brands">Markalar</a>
+            <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+            <a class="nav-item" href="iletisim.html">İletişim</a>
+        </nav>
+
+        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
+        <label for="toggle" id="toggle-label">
+            <div class="dropdown-toggle">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+    </header>
+    <nav class="dropdown hidden dropdown-navbar">
+        <a class="dropdown-nav-item hidden" href="index.html">Ana sayfa</a>
+        <a class="dropdown-nav-item hidden" href="hakkimizda.html">Hakkımızda</a>
+        <a class="dropdown-nav-item hidden" href="#brands">Markalar</a>
+        <a class="dropdown-nav-item hidden" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+        <a class="dropdown-nav-item hidden" href="iletisim.html">İletişim</a>
+    </nav>
