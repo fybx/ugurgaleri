@@ -1,2 +1,13 @@
 @use "../variables.scss";
 @use "../mixins.scss";
+
+
+table {
+  width: 100%;
+  border: solid 1px black;
+}
+
+td {
+  padding: 1em;
+  border: solid 1px black;
+}
