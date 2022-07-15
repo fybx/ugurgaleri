@@ -4,14 +4,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 .showcase {
   display: flex;
-  height: 100vh;
-  background-image: url("../../resources/img/index/g.jpg"), url("../../resources/img/index/y.jpg");
+  height: 90vh;
+  background-image: url("../img/index/g.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: brightness(0%);
+}
+@media screen and (max-width: 850px) {
+  .showcase {
+    height: 95vh;
+  }
 }
 
+.showcase-animation {
+  animation: slideshow-appear 1000ms;
+}
+
+@keyframes slideshow-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .table {
   display: flex;
   flex-direction: column;
@@ -22,23 +38,48 @@
   flex-direction: row;
   align-items: center;
 }
+.table .table-item p {
+  font: x-large sans-serif;
+}
+@media screen and (max-width: 1100px) {
+  .table .table-item p {
+    font-size: large;
+  }
+}
+@media screen and (max-width: 850px) {
+  .table .table-item p {
+    font-size: xx-small;
+  }
+}
 .table .table-item img {
   margin-right: 20px;
-  height: auto;
-  width: 100px;
+  width: 150px;
 }
 @media screen and (max-width: 1100px) {
   .table .table-item img {
     margin-right: 10px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 850px) {
   .table .table-item img {
     margin-right: 10px;
+    width: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .table .table-item img {
+    margin: 0 0 2px 0;
+    width: 100px;
   }
 }
 .table .table-item:first-of-type {
   margin-top: 0;
+}
+@media screen and (max-width: 400px) {
+  .table .table-item {
+    flex-direction: column;
+  }
 }
 .table .vertical-separator {
   height: 120px;
@@ -53,6 +94,22 @@
 @media screen and (max-width: 850px) {
   .table .vertical-separator {
     margin-right: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .table .vertical-separator {
+    display: none;
+  }
+}
+.table .horizontal-separator {
+  display: none;
+  width: 120px;
+  border: solid 1px #1d60b5;
+  margin: 0 0 18px 0;
+}
+@media screen and (max-width: 400px) {
+  .table .horizontal-separator {
+    display: block;
   }
 }
 .table .reverse {
@@ -75,6 +132,11 @@
 .table .reverse p {
   text-align: right;
 }
+@media screen and (max-width: 400px) {
+  .table .reverse p {
+    text-align: left;
+  }
+}
 .table .reverse .vertical-separator {
   margin-right: 0;
   margin-left: 180px;
@@ -89,8 +151,29 @@
     margin-left: 18px;
   }
 }
+@media screen and (max-width: 400px) {
+  .table .reverse {
+    flex-direction: column;
+  }
+}
 .table .square img {
-  height: 100px;
+  height: 150px;
+  width: auto;
+}
+@media screen and (max-width: 1100px) {
+  .table .square img {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .table .square img {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .table .square img {
+    height: 100px;
+  }
 }
 .table .table-item-animation {
   animation: slide-in-right 3000ms;
@@ -129,6 +212,7 @@
 }
 .social p {
   font: 700 32px "Montserrat", sans-serif;
+  margin: 30px 0;
 }
 .social .social-button {
   display: inline-block;
@@ -151,6 +235,21 @@
 }
 .social .social-button:last-of-type {
   margin: 0;
+}
+@media screen and (max-width: 400px) {
+  .social .social-button {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .social {
+    flex-direction: column;
+  }
+  .social p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
 }
 
 #header {
@@ -316,7 +415,8 @@
   justify-content: space-between;
   background-color: #000000;
   font: 16px "Montserrat", sans-serif;
-  padding: 50px 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #footer #small-logo {
   height: 50px;
@@ -333,6 +433,11 @@
   font: 700 18px "Montserrat", sans-serif;
   color: #f5ffff;
 }
+@media screen and (max-width: 400px) {
+  #footer .footer-columns .footer-column h1 {
+    font-size: 14px;
+  }
+}
 #footer .footer-columns .footer-column a {
   text-decoration: none;
   color: #abb3b3;
@@ -341,15 +446,26 @@
   font-size: 17px;
   color: #b3d1ff;
 }
+@media screen and (max-width: 400px) {
+  #footer .footer-columns .footer-column a:hover {
+    font-size: 13px;
+  }
+}
 #footer .footer-columns .footer-column ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+@media screen and (max-width: 400px) {
+  #footer {
+    font-size: 12px;
+  }
+}
 
 #footer-stateless {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #1d60b5;
   color: white;
   font: 14px "Montserrat", sans-serif;
@@ -364,6 +480,16 @@
 #footer-stateless .smaller {
   font-weight: 200;
   font-size: 12px;
+}
+@media screen and (max-width: 400px) {
+  #footer-stateless .smaller {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #footer-stateless {
+    font-size: 10px;
+  }
 }
 
 html, body {

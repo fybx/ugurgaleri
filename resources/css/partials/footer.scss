@@ -6,7 +6,8 @@
   justify-content: space-between;
   background-color: variables.$clr_footerBackground;
   font: 16px "Montserrat", sans-serif;
-  padding: 50px 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   #small-logo {
     height: 50px;
@@ -23,6 +24,10 @@
         margin: 0 0 16px 0;
         font: 700 18px "Montserrat", sans-serif;
         color: variables.$clr_footerSleepHigh;
+
+        @include mixins.mx_mobile {
+          font-size: 14px;
+        }
       }
 
       a {
@@ -32,6 +37,10 @@
         &:hover {
           font-size: 17px;
           color: variables.$clr_footerActive;
+
+          @include mixins.mx_mobile {
+            font-size: 13px;
+          }
         }
       }
 
@@ -42,11 +51,16 @@
       }
     }
   }
+
+  @include mixins.mx_mobile {
+    font-size: 12px;
+  }
 }
 
 #footer-stateless {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: variables.$clr_brand;
   color: white;
   font: 14px "Montserrat", sans-serif;
@@ -63,5 +77,13 @@
   .smaller {
     font-weight: 200;
     font-size: 12px;
+
+    @include mixins.mx_mobile {
+      font-size: 8px;
+    }
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 10px;
   }
 }

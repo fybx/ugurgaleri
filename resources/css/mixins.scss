@@ -35,3 +35,9 @@
     @content;
   }
 }
+
+@mixin mx_mobile {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
