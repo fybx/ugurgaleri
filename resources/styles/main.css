@@ -262,6 +262,110 @@ td {
   border: solid 1px black;
 }
 
+.documents {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to left, #1d60b5, #3b8fff);
+}
+.documents a {
+  margin: 0 5vw 0 0;
+  padding: 1vh 1vw;
+  flex: 1;
+  display: block;
+  filter: light(50%);
+  text-align: center;
+  border-radius: 20px;
+}
+.documents a:last-of-type {
+  margin: 0;
+}
+.documents a:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: 250ms cubic-bezier(0.4, 0, 1, 1);
+}
+.documents a:hover img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(2506%) hue-rotate(220deg) brightness(96%) contrast(90%);
+}
+.documents a:hover h1 {
+  color: #1d409d;
+}
+.documents a img {
+  margin: 0 0 2.5vh 0;
+  height: 100px;
+}
+.documents a h1 {
+  color: white;
+  font: 600 18px Montserrat, sans-serif;
+}
+@media screen and (max-width: 1515px) {
+  .documents a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 4.5vh 0;
+  }
+  .documents a:last-of-type {
+    margin: 0;
+  }
+  .documents a img {
+    margin: 0 2.5vw 0 0;
+  }
+  .documents a h1 {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 420px) {
+  .documents a img {
+    width: 50px;
+    margin: 0 2vw 0 0;
+  }
+  .documents a h1 {
+    font: 500 12px Montserrat, sans-serif;
+  }
+}
+@media screen and (max-width: 1515px) {
+  .documents {
+    flex-direction: column;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #706fff;
+}
+a:hover {
+  color: #01003B;
+}
+
+.map {
+  width: 100vw;
+  height: auto;
+}
+.map iframe {
+  width: 100%;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  font: 500 24px "Montserrat", sans-serif;
+}
+.information .contact, .information .location {
+  width: 50%;
+}
+.information .contact h1, .information .location h1 {
+  font: 600 48px "Montserrat", sans-serif;
+}
+.information .contact h2, .information .location h2 {
+  font: 600 40px "Montserrat", sans-serif;
+}
+.information .contact {
+  margin: 0 50px 0 0;
+}
+
 #header {
   background: #FDFFFF;
   padding: 0 150px;
@@ -506,6 +610,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #364040;
+  scroll-behavior: smooth;
 }
 
 .content-spacing {

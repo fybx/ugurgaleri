@@ -1,7 +1,6 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
-
 table {
   width: 100%;
   border: solid 1px black;
@@ -10,4 +9,80 @@ table {
 td {
   padding: 1em;
   border: solid 1px black;
+}
+
+.documents {
+  display: flex;
+  flex-direction: row;
+  background: variables.$clr_brand_gradient;
+
+  a {
+    margin: 0 5vw 0 0;
+    padding: 1vh 1vw;
+    flex: 1;
+    display: block;
+    filter: light(50%);
+    text-align: center;
+    border-radius: 20px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: rgba(100%, 100%, 100%, 75%);
+      transition: 250ms cubic-bezier(0.4, 0, 1, 1);
+
+      img {
+        filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(2506%) hue-rotate(220deg) brightness(96%) contrast(90%);
+      }
+
+      h1 {
+        color: #1d409d;
+      }
+    }
+
+    img {
+      margin: 0 0 2.5vh 0;
+      height: 100px;
+    }
+
+    h1 {
+      color: white;
+      font: 600 18px Montserrat, sans-serif;
+    }
+
+    @include mixins.mx_aydinlatma_documents_fix {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 4.5vh 0;
+
+      &:last-of-type {
+        margin: 0;
+      }
+
+      img {
+        margin: 0 2.5vw 0 0;
+      }
+
+      h1 {
+        text-align: left;
+      }
+    }
+
+    @include mixins.mx_aydinlatma_documents_fix2 {
+      img {
+        width: 50px;
+        margin: 0 2vw 0 0;
+      }
+
+      h1 {
+        font: 500 12px Montserrat, sans-serif;
+      }
+    }
+  }
+
+  @include mixins.mx_aydinlatma_documents_fix {
+    flex-direction: column;
+  }
 }
