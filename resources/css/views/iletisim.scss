@@ -1,0 +1,72 @@
+@use "../variables.scss";
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$clr_nav_sleep;
+
+  &:hover {
+    color: variables.$clr_nav_active;
+  }
+}
+
+#map {
+  width: calc(100vw - (100vw - 100%));
+  height: auto;
+
+  iframe {
+    width: 100%;
+  }
+}
+
+#information {
+  display: flex;
+  flex-direction: row;
+  font: 500 24px "Montserrat", sans-serif;
+
+  .contact, .location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+
+    h1 {
+      font: 600 48px "Montserrat", sans-serif;
+    }
+
+    h2 {
+      font: 600 40px "Montserrat", sans-serif;
+      margin: 0.5em 0 0 0;
+    }
+
+    h3 {
+      font: 600 32px "Montserrat", sans-serif;
+      margin: 0.5em 0 0.25em 0;
+    }
+  }
+
+  .contact {
+    margin: 0 50px 0 0;
+  }
+
+  .click-call, .click-pm{
+    margin: 0 0 0 1em;
+    img {
+      width: 1em;
+      height: 1em;
+      margin: 0 1em 0 0;
+    }
+  }
+
+  .horizontal-separator {
+    width: 100%;
+    width: -moz-available;
+    //noinspection CssInvalidPropertyValue
+    width: -webkit-fill-available;
+    border: solid 1px black;
+
+  }
+}

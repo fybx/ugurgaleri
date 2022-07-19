@@ -41,3 +41,15 @@
     @content;
   }
 }
+
+@mixin mx_aydinlatma_documents_fix {
+  @media screen and (max-width: variables.$aydinlatma_documents_fix) {
+    @content;
+  }
+}
+
+@mixin mx_aydinlatma_documents_fix2 {
+  @media screen and (max-width: variables.$aydinlatma_documents_fix2) {
+    @content;
+  }
+}

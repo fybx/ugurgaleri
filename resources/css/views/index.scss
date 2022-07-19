@@ -139,14 +139,6 @@ $social-button_inner_margin: 10px;
       }
     }
 
-    p {
-      text-align: right;
-
-      @include mixins.mx_mobile {
-        text-align: left;
-      }
-    }
-
     .vertical-separator {
       margin-right: 0;
       margin-left: 9 * math.div(variables.$px_horizontalPadding, 10);;
@@ -222,7 +214,7 @@ $social-button_inner_margin: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to left, variables.$clr_brand, #3b8fff);
+  background: variables.$clr_brand_gradient;
   color: white;
 
   p {

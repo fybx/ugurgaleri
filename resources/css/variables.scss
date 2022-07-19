@@ -4,6 +4,8 @@ $index_brands_fix: 1100px;
 $index_brands_fix2: 850px;
 $footer_overflow: 1200px;
 $footer_overflow2: 850px;
+$aydinlatma_documents_fix: 1515px;
+$aydinlatma_documents_fix2: 420px;
 
 $px_headerPadding: 150px;
 $px_headerPadding2: 50px;
@@ -19,8 +21,8 @@ $sz_m_footer_p: 12px;
 $sz_s_footer_p: 8px;
 
 $clr_dark: #01003B;
-
 $clr_brand: #1d60b5;
+$clr_brand_gradient: linear-gradient(to left, $clr_brand, #3b8fff);
 
 $clr_logo: #FDFFFF;
 $clr_header: #FDFFFF;

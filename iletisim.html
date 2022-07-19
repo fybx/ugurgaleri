@@ -2,10 +2,119 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <title>İletişim | Uğur Galeri</title>
 </head>
 <body>
+<header id="header">
+    <div id="logo" class="bounce-animation">
+        <span style="--i: 1;">U</span>
+        <span style="--i: 2;">Ğ</span>
+        <span style="--i: 3;">U</span>
+        <span style="--i: 4;">R</span>
+        <span style="--i: 4;">&nbsp;</span>
+        <span style="--i: 5;">G</span>
+        <span style="--i: 6;">A</span>
+        <span style="--i: 7;">L</span>
+        <span style="--i: 8;">E</span>
+        <span style="--i: 9;">R</span>
+        <span style="--i: 10;">İ</span>
+    </div>
+    <nav class="navbar">
+        <a class="nav-item" href="index.html">Ana sayfa</a>
+        <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
+        <a class="nav-item" href="index.html#brands">Markalar</a>
+        <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+        <a class="nav-item" href="#">İletişim</a>
+    </nav>
 
+    <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
+    <label for="toggle" id="toggle-label">
+        <div class="dropdown-toggle">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
+        </div>
+    </label>
+</header>
+<nav class="dropdown hidden dropdown-navbar">
+    <a class="dropdown-nav-item hidden" href="index.html">Ana sayfa</a>
+    <a class="dropdown-nav-item hidden" href="hakkimizda.html">Hakkımızda</a>
+    <a class="dropdown-nav-item hidden" href="index.html#brands">Markalar</a>
+    <a class="dropdown-nav-item hidden" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+    <a class="dropdown-nav-item hidden" href="#">İletişim</a>
+</nav>
+<div id="container">
+    <main id="content">
+        <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.9179908499027!2d28.35519250061192!3d40.18279534131245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b5e12278d07515%3A0x93d0109b872a638f!2sUgur%20Galeri!5e0!3m2!1str!2str!4v1658087461242!5m2!1str!2str" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="information" class="content-spacing">
+            <article class="contact">
+                <h1>İletişim Bilgileri</h1>
+                <hr class="horizontal-separator">
+                <h2>Satış:</h2>
+                <h3>Furkan KOÇAK</h3>
+                <span class="click-call"><img src="resources/img/iletisim/phone.svg" alt="Telefon simgesi">Telefon: <a href="tel:+905325752544" title="Aramak için tıklayın">0532 575 2544</a></span>
+                <span class="click-pm"><img src="resources/img/iletisim/whatsapp.svg" alt="Whatsapp logosu"><a href="https://api.whatsapp.com/send/?phone=905325752544&text&app_absent=0">WhatsApp'tan mesaj yollayın</a></span>
+
+                <h3>Ahmet GİRGİN</h3>
+                <span class="click-call"><img src="resources/img/iletisim/phone.svg" alt="Telefon simgesi">Telefon: <a href="tel:+905325668216" title="Aramak için tıklayın">0532 566 8216</a></span>
+                <span class="click-pm"><img src="resources/img/iletisim/whatsapp.svg" alt="Whatsapp logosu"><a href="https://api.whatsapp.com/send/?phone=905325668216&text&app_absent=0">WhatsApp'tan mesaj yollayın</a></span>
+
+                <h3>Mustafa BALABAN</h3>
+                <span class="click-call"><img src="resources/img/iletisim/phone.svg" alt="Telefon simgesi">Telefon: <a href="tel:+905301154854" title="Aramak için tıklayın">0530 115 4854</a></span>
+                <span class="click-pm"><img src="resources/img/iletisim/whatsapp.svg" alt="Whatsapp logosu"><a href="https://api.whatsapp.com/send/?phone=905301154854&text&app_absent=0">WhatsApp'tan mesaj yollayın</a></span>
+            </article>
+            <article class="location">
+                <h1>Uğur Galeri</h1>
+                <hr class="horizontal-separator">
+                <h2>İrtibat</h2>
+                <span class="click-call"><img src="resources/img/iletisim/phone.svg" alt="Telefon simgesi">Cep telefonu: <a href="tel:+905373218487" title="Aramak için tıklayın">0537 321 8487</a></span>
+                <span class="click-call"><img src="resources/img/iletisim/landline.svg" alt="Sabit hat simgesi">Sabit hat: <a href="tel:+902246718380" title="Aramak için tıklayın">0224 671 83 80</a></span>
+                <span class="click-call"><img src="resources/img/iletisim/landline.svg" alt="Sabit hat simgesi">Sabit hat: <a href="tel:+902246718308" title="Aramak için tıklayın">0224 671 83 08</a></span>
+                <h2>Adres</h2>
+                <a class="no-decoration" href="#map"><p>Bursa Karacabey Yolu Kümeevler Mahallesi No:10<br>Karacabey/BURSA</p></a>
+                <h2>E-posta</h2>
+                <a href="mailto:iletisim@ugurgaleri.net" title="E-posta yollamak için tıklayın">iletisim@ugurgaleri.net</a>
+                <a href="mailto:iletisim@ugurkocaktreyler.com.tr" title="E-posta yollamak için tıklayın">iletisim@ugurkocaktreyler.com.tr</a>
+                <h2>Çalışma Saatlerimiz</h2>
+                <p><b>Hafta içi:</b> 08.00 - 19.00
+                <br><b>Cumartesi:</b> 08.00 - 18.00
+                <br><b>Pazar:</b> 12.00 - 17.00</p>
+            </article>
+        </section>
+    </main>
+    <footer id="footer" class="content-spacing">
+        <img id="small-logo" src="resources/img/Uğur%20Galeri/footer-white.png" alt="Uğur Galeri U logosu">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h1>Uğur Galeri</h1>
+                <ul>
+                    <li><a href="index.html">Ana sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="index.html#brands">Markalarımız</a></li>
+                    <li><a href="https://ugurgaleri1.sahibinden.com">Araçlarımız</a></li>
+                    <li><a href="">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h1>Kurumsal</h1>
+                <ul>
+                    <li><a>Misyonumuz</a></li>
+                    <li><a>Vizyonumuz</a></li>
+                    <li><a>Yönetim</a></li>
+                    <li><a href="aydinlatma.html">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="kamera.html">Kamera Kullanımı</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <footer id="footer-stateless" class="content-spacing ignore-vertical">
+        <p>&copy; Uğur Galeri 2022</p>
+        <p class="smaller">Dizayn & Uygulama: <a href="https://fybx.dev">fybx.dev</a></p>
+    </footer>
+</div>
 </body>
 </html>
