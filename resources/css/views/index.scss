@@ -139,14 +139,6 @@ $social-button_inner_margin: 10px;
       }
     }
 
-    p {
-      text-align: right;
-
-      @include mixins.mx_mobile {
-        text-align: left;
-      }
-    }
-
     .vertical-separator {
       margin-right: 0;
       margin-left: 9 * math.div(variables.$px_horizontalPadding, 10);;
