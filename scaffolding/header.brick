@@ -15,12 +15,12 @@
         <nav class="navbar">
             <a class="nav-item" href="index.html">Ana sayfa</a>
             <a class="nav-item" href="hakkimizda.html">Hakkımızda</a>
-            <a class="nav-item" href="#brands">Markalar</a>
+            <a class="nav-item" href="index.html#brands">Markalar</a>
             <a class="nav-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
             <a class="nav-item" href="iletisim.html">İletişim</a>
         </nav>
 
-        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
+        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()" autocomplete="off">
         <label for="toggle" id="toggle-label">
             <div class="dropdown-toggle">
                 <span class="bar bar1"></span>
@@ -33,7 +33,7 @@
     <nav class="dropdown hidden dropdown-navbar">
         <a class="dropdown-nav-item hidden" href="index.html">Ana sayfa</a>
         <a class="dropdown-nav-item hidden" href="hakkimizda.html">Hakkımızda</a>
-        <a class="dropdown-nav-item hidden" href="#brands">Markalar</a>
+        <a class="dropdown-nav-item hidden" href="index.html#brands">Markalar</a>
         <a class="dropdown-nav-item hidden" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
         <a class="dropdown-nav-item hidden" href="iletisim.html">İletişim</a>
     </nav>
