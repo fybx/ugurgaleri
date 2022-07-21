@@ -24,6 +24,12 @@
   }
 }
 
+@mixin header_overflow3 {
+  @media screen and (max-width: variables.$header_overflow3) {
+    @content;
+  }
+}
+
 @mixin mx_index_brands_fix {
   @media screen and (max-width: variables.$index_brands_fix) {
     @content;

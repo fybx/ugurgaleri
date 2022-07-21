@@ -407,6 +407,11 @@ a:hover {
     padding: 0 50px;
   }
 }
+@media screen and (max-width: 360px) {
+  #header {
+    padding: 0 25px;
+  }
+}
 #header #logo {
   display: flex;
   align-items: center;
@@ -462,7 +467,7 @@ a:hover {
   display: none;
 }
 #header .dropdown-toggle {
-  margin: 0 auto 0;
+  margin: 0;
   width: 36px;
   height: 36px;
   position: relative;
