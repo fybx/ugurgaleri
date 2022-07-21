@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta name="description" content="Kişisel Verilerin Korunması Kanunu hakkında aydınlatma metni.">
-    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <title>KVKK Aydınlatma Metni | Uğur Galeri</title>
+    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <script src="resources/scripts/main.js" defer></script>
 </head>
 <body>
@@ -31,14 +31,12 @@
         <a class="nav-item" href="iletisim.html">İletişim</a>
     </nav>
 
-    <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
-    <label for="toggle" id="toggle-label">
-        <div class="dropdown-toggle">
-            <span class="bar bar1"></span>
-            <span class="bar bar2"></span>
-            <span class="bar bar3"></span>
-            <span class="bar bar4"></span>
-        </div>
+    <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()" autocomplete="off">
+    <label for="toggle" id="toggle-label" class="dropdown-toggle">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+        <span class="bar bar4"></span>
     </label>
 </header>
 <nav class="dropdown hidden dropdown-navbar">
@@ -697,6 +695,7 @@
             </a>
         </section>
     </main>
+    <button id="scroll-to-top" onclick="scrollToTop()"><img src="resources/img/scroll-to-top.svg" alt="Scroll to top"></button>
     <footer id="footer" class="content-spacing">
         <img id="small-logo" src="resources/img/Uğur%20Galeri/footer-white.png" alt="Uğur Galeri U logosu">
         <div class="footer-columns">

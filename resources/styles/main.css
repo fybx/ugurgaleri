@@ -63,7 +63,7 @@
 }
 @media screen and (max-width: 850px) {
   .table .table-item img {
-    margin-right: 10px;
+    margin-right: 2px;
     width: 60px;
   }
 }
@@ -73,43 +73,43 @@
     width: 100px;
   }
 }
-.table .table-item:first-of-type {
-  margin-top: 0;
-}
-@media screen and (max-width: 400px) {
-  .table .table-item {
-    flex-direction: column;
-  }
-}
-.table .vertical-separator {
+.table .table-item .vertical-separator {
   height: 120px;
   border: solid 1px #1d60b5;
   margin-right: 180px;
 }
 @media screen and (max-width: 1100px) {
-  .table .vertical-separator {
+  .table .table-item .vertical-separator {
     margin-right: 90px;
   }
 }
 @media screen and (max-width: 850px) {
-  .table .vertical-separator {
+  .table .table-item .vertical-separator {
     margin-right: 18px;
   }
 }
 @media screen and (max-width: 400px) {
-  .table .vertical-separator {
+  .table .table-item .vertical-separator {
     display: none;
   }
 }
-.table .horizontal-separator {
+.table .table-item .horizontal-separator {
   display: none;
   width: 120px;
   border: solid 1px #1d60b5;
   margin: 0 0 18px 0;
 }
 @media screen and (max-width: 400px) {
-  .table .horizontal-separator {
+  .table .table-item .horizontal-separator {
     display: block;
+  }
+}
+.table .table-item:first-of-type {
+  margin-top: 0;
+}
+@media screen and (max-width: 400px) {
+  .table .table-item {
+    flex-direction: column;
   }
 }
 .table .reverse {
@@ -146,6 +146,10 @@
 @media screen and (max-width: 400px) {
   .table .reverse {
     flex-direction: column;
+  }
+  .table .reverse img {
+    margin: 0 0 2px 0;
+    width: 100px;
   }
 }
 .table .square img {
@@ -377,6 +381,67 @@ a:hover {
   border: solid 1px black;
 }
 
+#video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to left, #1d60b5, #3b8fff);
+}
+#video video {
+  width: 100% !important;
+  height: auto !important;
+}
+#video h1 {
+  margin: 0 0 1em 0;
+  font: 600 2.5vw "Montserrat", sans-serif;
+  color: white;
+}
+
+.sec-links-to-documents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to left, #1d60b5, #3b8fff);
+}
+.sec-links-to-documents h1 {
+  font: 500 32px "Montserrat", sans-serif;
+}
+.sec-links-to-documents h1 a {
+  background: linear-gradient(#FFFFFF, #adf0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font: 700 33px "Montserrat", sans-serif;
+}
+.sec-links-to-documents h1 a:hover {
+  color: black;
+}
+.sec-links-to-documents h1 a:active {
+  background: linear-gradient(to top, #FFFFFF, #adf0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sec-links-to-documents h1:first-of-type {
+  margin: 0 0 2.5vh 0;
+}
+@media screen and (max-width: 1215px) {
+  .sec-links-to-documents h1 {
+    font-size: 22px;
+  }
+  .sec-links-to-documents h1 a {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .sec-links-to-documents h1 {
+    font-size: 12px;
+  }
+  .sec-links-to-documents h1 a {
+    font-size: 13px;
+  }
+}
+
 #header {
   background: #FDFFFF;
   padding: 0 150px;
@@ -389,6 +454,11 @@ a:hover {
 @media screen and (max-width: 850px) {
   #header {
     padding: 0 50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #header {
+    padding: 0 25px;
   }
 }
 #header #logo {
@@ -446,7 +516,7 @@ a:hover {
   display: none;
 }
 #header .dropdown-toggle {
-  margin: 0 auto 0;
+  margin: 0;
   width: 36px;
   height: 36px;
   position: relative;
@@ -665,11 +735,14 @@ html, body {
 }
 
 #header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
   height: 10vh;
 }
 @media screen and (max-width: 850px) {
   #header {
-    height: 5vh;
+    height: 45px;
   }
 }
 
@@ -687,9 +760,10 @@ html, body {
 .dropdown .dropdown-nav-item {
   position: relative;
   margin-top: 50px;
-  background: -webkit-linear-gradient(#FFFFFF, #adf0ff);
+  background: linear-gradient(#FFFFFF, #adf0ff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font: 600 28px "Montserrat", sans-serif;
   text-decoration: none;
   -webkit-animation: navbar-appear 550ms;
@@ -716,7 +790,7 @@ html, body {
 }
 @media screen and (max-width: 850px) {
   .dropdown {
-    height: 95vh;
+    height: calc(100vh - 45px);
   }
 }
 
@@ -819,7 +893,7 @@ html, body {
   }
 }
 #container {
-  height: 90vh;
+  min-height: 90vh;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -828,7 +902,7 @@ html, body {
 }
 @media screen and (max-width: 850px) {
   #container {
-    height: 95vh;
+    min-height: calc(100vh - 45px);
   }
 }
 
@@ -837,6 +911,36 @@ html, body {
   grid-column: 1;
   grid-row: 1;
   overflow-wrap: break-word;
+}
+
+#scroll-to-top {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 55px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #1d60b5;
+}
+#scroll-to-top img {
+  height: 100%;
+  width: 100%;
+  filter: invert(100%);
+}
+#scroll-to-top:hover {
+  width: 60px;
+  height: 60px;
+  right: 20px;
+  bottom: 50px;
+  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+}
+#scroll-to-top:hover img {
+  transform: translateY(-5px);
+  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
 }
 
 #footer {

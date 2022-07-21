@@ -2,12 +2,12 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="Uğur Galeri">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Uğur Galeri ve Uğur Koçak Treyler'in websitesine hoş geldiniz!">
+    <title>Ana sayfa | Uğur Galeri</title>
+    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
     <script src="resources/scripts/main.js" defer></script>
     <script src="resources/scripts/index.js" defer></script>
-    <link type="text/css" rel="stylesheet" href="resources/styles/main.css">
-    <title>Uğur Galeri</title>
 </head>
 <body>
     <header id="header">
@@ -32,14 +32,12 @@
             <a class="nav-item" href="iletisim.html">İletişim</a>
         </nav>
 
-        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()">
-        <label for="toggle" id="toggle-label">
-            <div class="dropdown-toggle">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-            </div>
+        <input type="checkbox" id="toggle" class="toggle" onchange="toggleDropdown()" autocomplete="off">
+        <label for="toggle" id="toggle-label" class="dropdown-toggle">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+            <span class="bar bar4"></span>
         </label>
     </header>
     <nav class="dropdown hidden dropdown-navbar">
@@ -56,19 +54,19 @@
             </div>
             <div id="brands" class="table content-spacing">
                 <div class="table-item square">
-                    <img src="resources/img/ugurgaleri-utek.png">
+                    <img src="resources/img/ugurgaleri-utek.png" alt="Uğur Galeri U logosu">
                     <div class="vertical-separator"></div>
                     <div class="horizontal-separator"></div>
                     <p>Şirketimiz 4 Nisan 2001 tarihinde Karacabey, Bursa'da ikinci el ticari araç ve ağır vasıta satışına başlamıştır. Köklü galericilik deneyimini, satış politikalarını ve zamana ayak uyduran yenilikçi bakış açısını bünyesinde harmanlayan, sektöre yön veren ve yapmış olduğu işler ile sektördeki varlığını kanıtlamış bir firmadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
                 </div>
                 <div class="table-item reverse">
-                    <img src="resources/img/UKT/UKT.png">
+                    <img src="resources/img/UKT/UKT.png" alt="Uğur Koçak Treyler logosu">
                     <div class="vertical-separator"></div>
                     <div class="horizontal-separator"></div>
-                    <p>Uğur Koçak Treyler, müşteri gereksinimlerine istinaden 21 Eylül 2012 tarihinde <b>sıfır araç</b> satışı yapmak için kurulmuştur. Firma Uğur Galeri yerleşkesi içerisinde distribütörlük/bayilik anlaşması yapmış olduğu ağır vasıta sektörünün treyler grubunda öncü firmalar ile çalışmakta olup müşterilerin ihtiyaçlarına en hızlı, en doğru ve en kullanışlı biçimde cevap verebilecek niteliktedir.<br>Satış yelpazesinde <!--TODO--><b><i>Krone, Makinsan ve Otokar</i></b> firmaları yer almaktadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
+                    <p>Uğur Koçak Treyler, müşteri gereksinimlerine istinaden 21 Eylül 2012 tarihinde <b>sıfır araç</b> satışı yapmak için kurulmuştur. Firma Uğur Galeri yerleşkesi içerisinde distribütörlük/bayilik anlaşması yapmış olduğu ağır vasıta sektörünün treyler grubunda öncü firmalar ile çalışmakta olup müşterilerin ihtiyaçlarına en hızlı, en doğru ve en kullanışlı biçimde cevap verebilecek niteliktedir.<br>Satış yelpazesinde <b><i>Krone, Makinsan ve Otokar</i></b> firmaları yer almaktadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
                 </div>
                 <div class="table-item">
-                    <img src="resources/img/galericilerden.com/galericilerden.jpg">
+                    <img src="resources/img/galericilerden.com/galericilerden.jpg" alt="galericilerden.com logosu">
                     <div class="vertical-separator"></div>
                     <div class="horizontal-separator"></div>
                     <p>2018 yılında interaktif satışın müşterilerin talepleri doğrultusunda mevcut ürünlerin tanıtımı ve pazarlanması amacıyla Uğur Galeri bünyesinde e-ticaret alışveriş sitesi olarak kurulmuştur. Hedefimiz, galeri sahiplerinin güvenilir bir platformda araçlarını detaylı biçimde sunabilmeleri; müşterilerin de ihtiyaçlarına göre güvenilir ve uygun şekilde ulaşmalarını sağlamaktır.</p>
@@ -83,6 +81,7 @@
                 </nav>
             </div>
         </main>
+        <button id="scroll-to-top" onclick="scrollToTop()"><img src="resources/img/scroll-to-top.svg" alt="Scroll to top"></button>
         <footer id="footer" class="content-spacing">
             <img id="small-logo" src="resources/img/Uğur%20Galeri/footer-white.png" alt="Uğur Galeri U logosu">
             <div class="footer-columns">

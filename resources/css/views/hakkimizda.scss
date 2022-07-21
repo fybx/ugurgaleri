@@ -1,0 +1,32 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+#video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: variables.$clr_brand_gradient;
+
+  video {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  h1 {
+    margin: 0 0 1em 0;
+    font: 600 2.5vw "Montserrat", sans-serif;
+    color: white;
+  }
+}
+
+#hikaye {
+
+}
+
+#misyon, #vizyon {
+
+}
+
+#yonetim {
+
+}

@@ -70,13 +70,44 @@ $social-button_inner_margin: 10px;
       }
 
       @include mixins.mx_index_brands_fix2 {
-        margin-right: math.div(variables.$px_horizontalPadding2, 10);
+        margin-right: math.div(variables.$px_horizontalPadding3, 10);
         width: $table-item_img_width_s;
       }
 
       @include mixins.mx_mobile {
         margin: 0 0 2px 0;
         width: $table-item_img_width;
+      }
+    }
+
+    .vertical-separator {
+      // vertical-separator makes an empty div behave as a separator which aligned vertically
+      height: $table-item_img_width + 20px;
+      border: solid 1px variables.$clr_brand;
+      margin-right: 9 * math.div(variables.$px_horizontalPadding, 10);
+
+      @include mixins.mx_index_brands_fix {
+        margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
+      }
+
+      @include mixins.mx_index_brands_fix2 {
+        margin-right: 9 * math.div(variables.$px_horizontalPadding3, 10);
+      }
+
+      @include mixins.mx_mobile {
+        display: none;
+      }
+    }
+
+    .horizontal-separator {
+      // horizontal-separator makes an empty div behave as a separator which aligned horizontally
+      display: none;
+      width: $table-item_img_width + 20px;
+      border: solid 1px variables.$clr_brand;
+      margin: 0 0 18px 0;
+
+      @include mixins.mx_mobile {
+        display: block;
       }
     }
 
@@ -89,40 +120,9 @@ $social-button_inner_margin: 10px;
     }
   }
 
-  .vertical-separator {
-    // vertical-separator makes an empty div behave as a separator which aligned vertically
-    height: $table-item_img_width + 20px;
-    border: solid 1px variables.$clr_brand;
-    margin-right: 9 * math.div(variables.$px_horizontalPadding, 10);
-
-    @include mixins.mx_index_brands_fix {
-      margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
-    }
-
-    @include mixins.mx_index_brands_fix2 {
-      margin-right: 9 * math.div(variables.$px_horizontalPadding3, 10);
-    }
-
-    @include mixins.mx_mobile {
-      display: none;
-    }
-  }
-
-  .horizontal-separator {
-    // horizontal-separator makes an empty div behave as a separator which aligned horizontally
-    display: none;
-    width: $table-item_img_width + 20px;
-    border: solid 1px variables.$clr_brand;
-    margin: 0 0 18px 0;
-
-    @include mixins.mx_mobile {
-      display: block;
-    }
-  }
-
   .reverse {
     // reverse is a property given to .table-item elements
-    // it contains styling for img, p and .vertical-separator elements contained under
+    // it contains styling for img and .vertical-separator elements contained under
     // a .table-item element
     flex-direction: row-reverse;
 
@@ -154,6 +154,11 @@ $social-button_inner_margin: 10px;
 
     @include mixins.mx_mobile {
       flex-direction: column;
+
+      img {
+        margin: 0 0 2px 0;
+        width: $table-item_img_width;
+      }
     }
   }
 
