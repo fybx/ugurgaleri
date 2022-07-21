@@ -9,6 +9,8 @@
 @use "partials/footer.scss";
 @use "sass:math";
 
+$px_scroll-to-top_size: 50px;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -57,6 +59,8 @@ html, body {
 }
 
 #header {
+  position: sticky;
+  top: 0;
   // Layout, details and children is set in partials/header.scss
   height: 10vh;
 
@@ -228,7 +232,7 @@ html, body {
 }
 
 #container {
-  height: 90vh;
+  min-height: 90vh;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -236,7 +240,7 @@ html, body {
   overflow: auto;
 
   @include mixins.header_overflow2 {
-    height: calc(100vh - 45px);
+    min-height: calc(100vh - 45px);
   }
 }
 
@@ -245,6 +249,39 @@ html, body {
   grid-column: 1;
   grid-row: 1;
   overflow-wrap: break-word;
+}
+
+#scroll-to-top {
+  width: $px_scroll-to-top_size;
+  height: $px_scroll-to-top_size;
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 55px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: variables.$clr_brand;
+
+  img {
+    height: 100%;
+    width: 100%;
+    filter: invert(100%);
+  }
+
+  &:hover {
+    width: $px_scroll-to-top_size + 10;
+    height: $px_scroll-to-top_size + 10;
+    right: 20px;
+    bottom: 50px;
+    transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+
+    img {
+      transform: translateY(-5px);
+      transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+    }
+  }
 }
 
 #footer {
