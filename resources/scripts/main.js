@@ -1,3 +1,18 @@
+scroll_to_top = document.getElementById("scroll-to-top");
+
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+        scroll_to_top.style.display = "block";
+    } else {
+        scroll_to_top.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+}
+
 async function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
