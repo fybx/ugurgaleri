@@ -61,6 +61,7 @@ html, body {
 #header {
   position: sticky;
   top: 0;
+  z-index: 99;
   // Layout, details and children is set in partials/header.scss
   height: 10vh;
 
