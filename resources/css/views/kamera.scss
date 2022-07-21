@@ -1,0 +1,54 @@
+@use "../variables";
+@use "../mixins";
+
+.sec-links-to-documents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: variables.$clr_brand_gradient;
+
+  h1 {
+    font: 500 32px "Montserrat", sans-serif;
+
+    a {
+      background: variables.$cg_drawer_navitem;
+      -webkit-background-clip: text;
+      //noinspection CssInvalidPropertyValue
+      background-clip: text;
+      color: transparent;
+      font: 700 33px "Montserrat", sans-serif;
+
+      &:hover {
+        color: black;
+      }
+
+      &:active {
+        background: variables.$cg_drawer_navitem2;
+        -webkit-background-clip: text;
+        //noinspection CssInvalidPropertyValue
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    &:first-of-type {
+      margin: 0 0 2.5vh 0;
+    }
+
+    @include mixins.mx_kamera_sec-links-to-documents {
+      font-size: 22px;
+
+      a {
+        font-size: 23px;
+      }
+    }
+
+    @include mixins.mx_kamera_sec-links-to-documents2 {
+      font-size: 12px;
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}

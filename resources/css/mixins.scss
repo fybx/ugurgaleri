@@ -1,4 +1,5 @@
 @use "variables.scss";
+@use "overflow";
 
 @mixin footer_overflow {
   @media screen and (max-width: variables.$footer_overflow) {
@@ -56,6 +57,18 @@
 
 @mixin mx_aydinlatma_documents_fix2 {
   @media screen and (max-width: variables.$aydinlatma_documents_fix2) {
+    @content;
+  }
+}
+
+@mixin mx_kamera_sec-links-to-documents {
+  @media screen and (max-width: overflow.$kamera_sec_links-to-documents) {
+    @content;
+  }
+}
+
+@mixin mx_kamera_sec-links-to-documents2 {
+  @media screen and (max-width: overflow.$kamera_sec_links-to-documents2) {
     @content;
   }
 }
