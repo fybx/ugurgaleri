@@ -4,6 +4,7 @@
 @use "views/aydinlatma.scss";
 @use "views/iletisim.scss";
 @use "views/hakkimizda.scss";
+@use "views/kamera.scss";
 @use "partials/header.scss";
 @use "partials/footer.scss";
 @use "sass:math";
@@ -78,9 +79,11 @@ html, body {
   .dropdown-nav-item {
     position: relative;
     margin-top: math.div(variables.$px_horizontalPadding, 4);
-    background: -webkit-linear-gradient(#FFFFFF, #adf0ff);
+    background: linear-gradient(#FFFFFF, #adf0ff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    //noinspection CssInvalidPropertyValue
+    background-clip: text;
+    color: transparent;
     font: 600 28px "Montserrat", sans-serif;
     text-decoration: none;
     -webkit-animation: navbar-appear 550ms;
