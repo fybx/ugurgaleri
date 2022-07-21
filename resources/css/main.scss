@@ -110,7 +110,7 @@ html, body {
   }
 
   @include mixins.header_overflow2 {
-    height: 95vh;
+    height: calc(100vh - 45px);
   }
 }
 
