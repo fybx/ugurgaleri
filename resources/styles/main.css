@@ -735,6 +735,8 @@ html, body {
 }
 
 #header {
+  position: sticky;
+  top: 0;
   height: 10vh;
 }
 @media screen and (max-width: 850px) {
@@ -890,7 +892,7 @@ html, body {
   }
 }
 #container {
-  height: 90vh;
+  min-height: 90vh;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -899,7 +901,7 @@ html, body {
 }
 @media screen and (max-width: 850px) {
   #container {
-    height: calc(100vh - 45px);
+    min-height: calc(100vh - 45px);
   }
 }
 
@@ -908,6 +910,36 @@ html, body {
   grid-column: 1;
   grid-row: 1;
   overflow-wrap: break-word;
+}
+
+#scroll-to-top {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 55px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #1d60b5;
+}
+#scroll-to-top img {
+  height: 100%;
+  width: 100%;
+  filter: invert(100%);
+}
+#scroll-to-top:hover {
+  width: 60px;
+  height: 60px;
+  right: 20px;
+  bottom: 50px;
+  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+}
+#scroll-to-top:hover img {
+  transform: translateY(-5px);
+  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
 }
 
 #footer {
