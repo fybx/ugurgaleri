@@ -122,7 +122,7 @@ $social-button_inner_margin: 10px;
 
   .reverse {
     // reverse is a property given to .table-item elements
-    // it contains styling for img, p and .vertical-separator elements contained under
+    // it contains styling for img and .vertical-separator elements contained under
     // a .table-item element
     flex-direction: row-reverse;
 
@@ -154,6 +154,11 @@ $social-button_inner_margin: 10px;
 
     @include mixins.mx_mobile {
       flex-direction: column;
+
+      img {
+        margin: 0 0 2px 0;
+        width: $table-item_img_width;
+      }
     }
   }
 
