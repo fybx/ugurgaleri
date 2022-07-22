@@ -1,4 +1,5 @@
-@use "../variables.scss";
+@use "../variables";
+@use "../mixins";
 
 h1 {
   margin: 0;
@@ -28,28 +29,70 @@ a {
   font: 500 24px "Montserrat", sans-serif;
 
   .contact, .location {
+    width: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
 
     h1 {
       font: 600 48px "Montserrat", sans-serif;
+
+      @include mixins.mx_iletisim_sec_information {
+        font-size: 40px;
+      }
+
+      @include mixins.mx_iletisim_sec_information2 {
+        font-size: 48px;
+      }
+
+      @include mixins.mx_iletisim_sec_information3 {
+        font-size: 36px;
+      }
     }
 
     h2 {
       font: 600 40px "Montserrat", sans-serif;
       margin: 0.5em 0 0 0;
+
+      @include mixins.mx_iletisim_sec_information {
+        font-size: 32px;
+      }
+
+      @include mixins.mx_iletisim_sec_information2 {
+        font-size: 40px;
+      }
+
+      @include mixins.mx_iletisim_sec_information3 {
+        font-size: 28px;
+      }
     }
 
     h3 {
       font: 600 32px "Montserrat", sans-serif;
       margin: 0.5em 0 0.25em 0;
+
+      @include mixins.mx_iletisim_sec_information {
+        font-size: 24px;
+      }
+
+      @include mixins.mx_iletisim_sec_information2 {
+        font-size: 32px;
+      }
+
+
+      @include mixins.mx_iletisim_sec_information3 {
+        font-size: 18px;
+      }
     }
   }
 
   .contact {
-    margin: 0 50px 0 0;
+    margin: 0 2vw 0 0;
+
+    @include mixins.mx_iletisim_sec_information2 {
+      margin: 0 0 2vh 0;
+    }
   }
 
   .click-call, .click-pm{
@@ -67,6 +110,15 @@ a {
     //noinspection CssInvalidPropertyValue
     width: -webkit-fill-available;
     border: solid 1px black;
+  }
 
+  @include mixins.mx_iletisim_sec_information2 {
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  @include mixins.mx_iletisim_sec_information3 {
+    font-size: 16px;
   }
 }
