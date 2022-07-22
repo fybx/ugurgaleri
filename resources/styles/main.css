@@ -1003,16 +1003,18 @@ a:active {
   width: 100%;
   filter: invert(100%);
 }
-#scroll-to-top:hover {
-  width: 60px;
-  height: 60px;
-  right: 20px;
-  bottom: 50px;
-  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
-}
-#scroll-to-top:hover img {
-  transform: translateY(-5px);
-  transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+@media (hover: hover) and (pointer: fine) {
+  #scroll-to-top:hover {
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 50px;
+    transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+  }
+  #scroll-to-top:hover img {
+    transform: translateY(-5px);
+    transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+  }
 }
 
 #footer {
