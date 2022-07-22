@@ -2,15 +2,15 @@
 @use "../mixins.scss";
 @use "sass:math";
 
-$dropdown-toggle_l_width_no_unit: 36;
-$dropdown-toggle_s_width_no_unit: 28;
+$toggle-label_l_width_no_unit: 36;
+$toggle-label_s_width_no_unit: 28;
 
-$dropdown-toggle_l_width: $dropdown-toggle_l_width_no_unit * 1px;
-$dropdown-toggle_l_cross_width: math.floor(math.sqrt(2 * math.pow($dropdown-toggle_l_width_no_unit, 2))) * 1px;
-$dropdown-toggle_l_second_bar: math.div($dropdown-toggle_l_width - 4, 2);
-$dropdown-toggle_s_width: $dropdown-toggle_s_width_no_unit * 1px;
-$dropdown-toggle_s_cross_width: math.floor(math.sqrt(2 * math.pow($dropdown-toggle_s_width_no_unit, 2))) * 1px;
-$dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
+$toggle-label_l_width: $toggle-label_l_width_no_unit * 1px;
+$toggle-label_l_cross_width: math.floor(math.sqrt(2 * math.pow($toggle-label_l_width_no_unit, 2))) * 1px;
+$toggle-label_l_second_bar: math.div($toggle-label_l_width - 4, 2);
+$toggle-label_s_width: $toggle-label_s_width_no_unit * 1px;
+$toggle-label_s_cross_width: math.floor(math.sqrt(2 * math.pow($toggle-label_s_width_no_unit, 2))) * 1px;
+$toggle-label_s_second_bar: math.div($toggle-label_s_width - 4, 2);
 
 
 #header {
@@ -92,16 +92,16 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
     display: none;
   }
 
-  .dropdown-toggle {
+  #toggle-label {
     margin: 0;
-    width: $dropdown-toggle_l_width;
-    height: $dropdown-toggle_l_width;
+    width: $toggle-label_l_width;
+    height: $toggle-label_l_width;
     position: relative;
     cursor: pointer;
 
     .bar {
       padding: 0;
-      width: $dropdown-toggle_l_width;
+      width: $toggle-label_l_width;
       height: 4px;
       background-color: variables.$clr_brand;
       display: block;
@@ -119,11 +119,11 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
     }
 
     @include mixins.header_overflow2 {
-      width: $dropdown-toggle_s_width;
-      height: $dropdown-toggle_s_width;
+      width: $toggle-label_s_width;
+      height: $toggle-label_s_width;
 
       .bar {
-        width: $dropdown-toggle_s_width;
+        width: $toggle-label_s_width;
       }
     }
   }
@@ -134,10 +134,10 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
 
   .bar2,
   .bar3 {
-    top: $dropdown-toggle_l_second_bar;
+    top: $toggle-label_l_second_bar;
 
     @include mixins.header_overflow2 {
-      top: $dropdown-toggle_s_second_bar;
+      top: $toggle-label_s_second_bar;
     }
   }
 
@@ -149,35 +149,35 @@ $dropdown-toggle_s_second_bar: math.div($dropdown-toggle_s_width - 4, 2);
     bottom: 0;
   }
 
-  .toggle:checked + label > .dropdown-toggle > .bar1{
+  #toggle:checked + #toggle-label > .bar1{
     transform: rotate(45deg);
     height: 3px;
-    width: $dropdown-toggle_l_cross_width;
+    width: $toggle-label_l_cross_width;
 
     @include mixins.header_overflow2 {
-      width: $dropdown-toggle_s_cross_width;
+      width: $toggle-label_s_cross_width;
     }
   }
 
-  .toggle:checked + label > .dropdown-toggle > .bar3{
+  #toggle:checked + #toggle-label > .bar3{
     transform: rotate(45deg);
     height: 3px;
     background-color: transparent;
   }
 
-  .toggle:checked + label > .dropdown-toggle > .bar2{
+  #toggle:checked + #toggle-label > .bar2{
     transform: rotate(-45deg);
     height: 3px;
     background-color: transparent;
   }
 
-  .toggle:checked + label > .dropdown-toggle > .bar4{
+  #toggle:checked + #toggle-label > .bar4{
     transform: rotate(-45deg);
     height: 3px;
-    width: $dropdown-toggle_l_cross_width;
+    width: $toggle-label_l_cross_width;
 
     @include mixins.header_overflow2 {
-      width: $dropdown-toggle_s_cross_width;
+      width: $toggle-label_s_cross_width;
     }
   }
 
