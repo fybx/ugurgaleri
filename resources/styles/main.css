@@ -576,14 +576,14 @@ h1 {
 #header #toggle {
   display: none;
 }
-#header .dropdown-toggle {
+#header #toggle-label {
   margin: 0;
   width: 36px;
   height: 36px;
   position: relative;
   cursor: pointer;
 }
-#header .dropdown-toggle .bar {
+#header #toggle-label .bar {
   padding: 0;
   width: 36px;
   height: 4px;
@@ -593,18 +593,18 @@ h1 {
   transition: all 0.4s ease-in-out;
   position: absolute;
 }
-#header .dropdown-toggle .bar1 {
+#header #toggle-label .bar1 {
   transform-origin: 5%;
 }
-#header .dropdown-toggle .bar4 {
+#header #toggle-label .bar4 {
   transform-origin: 5%;
 }
 @media screen and (max-width: 850px) {
-  #header .dropdown-toggle {
+  #header #toggle-label {
     width: 28px;
     height: 28px;
   }
-  #header .dropdown-toggle .bar {
+  #header #toggle-label .bar {
     width: 28px;
   }
 }
@@ -627,33 +627,33 @@ h1 {
 #header .bar4 {
   bottom: 0;
 }
-#header .toggle:checked + label > .dropdown-toggle > .bar1 {
+#header #toggle:checked + #toggle-label > .bar1 {
   transform: rotate(45deg);
   height: 3px;
   width: 50px;
 }
 @media screen and (max-width: 850px) {
-  #header .toggle:checked + label > .dropdown-toggle > .bar1 {
+  #header #toggle:checked + #toggle-label > .bar1 {
     width: 39px;
   }
 }
-#header .toggle:checked + label > .dropdown-toggle > .bar3 {
+#header #toggle:checked + #toggle-label > .bar3 {
   transform: rotate(45deg);
   height: 3px;
   background-color: transparent;
 }
-#header .toggle:checked + label > .dropdown-toggle > .bar2 {
+#header #toggle:checked + #toggle-label > .bar2 {
   transform: rotate(-45deg);
   height: 3px;
   background-color: transparent;
 }
-#header .toggle:checked + label > .dropdown-toggle > .bar4 {
+#header #toggle:checked + #toggle-label > .bar4 {
   transform: rotate(-45deg);
   height: 3px;
   width: 50px;
 }
 @media screen and (max-width: 850px) {
-  #header .toggle:checked + label > .dropdown-toggle > .bar4 {
+  #header #toggle:checked + #toggle-label > .bar4 {
     width: 39px;
   }
 }
