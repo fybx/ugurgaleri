@@ -19,6 +19,19 @@ html, body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: variables.$clr_nav_sleep;
+
+  &:hover {
+    color: variables.$clr_nav_active;
+  }
+
+  &:active {
+    font-style: italic;
+  }
+}
+
 .content-spacing {
   padding: math.div(variables.$px_horizontalPadding, 2) variables.$px_horizontalPadding;
 

@@ -5,15 +5,6 @@ h1 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: variables.$clr_nav_sleep;
-
-  &:hover {
-    color: variables.$clr_nav_active;
-  }
-}
-
 #map {
   width: calc(100vw - (100vw - 100%));
   height: auto;
