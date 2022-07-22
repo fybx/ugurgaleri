@@ -210,7 +210,10 @@
   font: 700 32px "Montserrat", sans-serif;
   margin: 30px 0;
 }
-.social .social-button {
+.social nav {
+  display: flex;
+}
+.social nav .social-button {
   display: inline-block;
   height: 52px;
   width: auto;
@@ -218,22 +221,22 @@
   border-radius: 50%;
   margin: 0 10px 0 0;
 }
-.social .social-button img {
+.social nav .social-button img {
   margin: 10px;
   height: 32px;
   width: 32px;
 }
-.social .social-button:hover {
+.social nav .social-button:hover {
   background-color: white;
 }
-.social .social-button:hover img {
+.social nav .social-button:hover img {
   filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(2311%) hue-rotate(197deg) brightness(87%) contrast(88%);
 }
-.social .social-button:last-of-type {
+.social nav .social-button:last-of-type {
   margin: 0;
 }
 @media screen and (max-width: 400px) {
-  .social .social-button {
+  .social nav .social-button {
     margin: 0 0 30px 0;
   }
 }
@@ -245,6 +248,9 @@
     font-size: 20px;
     font-weight: 600;
     text-align: center;
+  }
+  .social nav .social-button {
+    margin-right: 10px;
   }
 }
 
@@ -325,14 +331,6 @@ h1 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #706fff;
-}
-a:hover {
-  color: #01003B;
-}
-
 #map {
   width: calc(100vw - (100vw - 100%));
   height: auto;
@@ -347,24 +345,75 @@ a:hover {
   font: 500 24px "Montserrat", sans-serif;
 }
 #information .contact, #information .location {
+  width: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
 }
 #information .contact h1, #information .location h1 {
   font: 600 48px "Montserrat", sans-serif;
+}
+@media screen and (max-width: 1235px) {
+  #information .contact h1, #information .location h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  #information .contact h1, #information .location h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #information .contact h1, #information .location h1 {
+    font-size: 36px;
+  }
 }
 #information .contact h2, #information .location h2 {
   font: 600 40px "Montserrat", sans-serif;
   margin: 0.5em 0 0 0;
 }
+@media screen and (max-width: 1235px) {
+  #information .contact h2, #information .location h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  #information .contact h2, #information .location h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #information .contact h2, #information .location h2 {
+    font-size: 28px;
+  }
+}
 #information .contact h3, #information .location h3 {
   font: 600 32px "Montserrat", sans-serif;
   margin: 0.5em 0 0.25em 0;
 }
+@media screen and (max-width: 1235px) {
+  #information .contact h3, #information .location h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  #information .contact h3, #information .location h3 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #information .contact h3, #information .location h3 {
+    font-size: 18px;
+  }
+}
 #information .contact {
-  margin: 0 50px 0 0;
+  margin: 0 2vw 0 0;
+}
+@media screen and (max-width: 1170px) {
+  #information .contact {
+    margin: 0 0 2vh 0;
+  }
 }
 #information .click-call, #information .click-pm {
   margin: 0 0 0 1em;
@@ -379,6 +428,18 @@ a:hover {
   width: -moz-available;
   width: -webkit-fill-available;
   border: solid 1px black;
+}
+@media screen and (max-width: 1170px) {
+  #information {
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 490px) {
+  #information {
+    font-size: 16px;
+  }
 }
 
 #video {
@@ -693,6 +754,17 @@ html, body {
   background-color: #364040;
   scroll-behavior: smooth;
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #706fff;
+}
+a:hover {
+  color: #01003B;
+}
+a:active {
+  font-style: italic;
 }
 
 .content-spacing {
