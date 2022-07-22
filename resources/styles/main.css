@@ -28,6 +28,11 @@
     opacity: 1;
   }
 }
+.araclar {
+  text-align: center;
+  font: 600 32px "Montserrat", sans-serif;
+}
+
 .table {
   display: flex;
   flex-direction: column;
@@ -36,7 +41,6 @@
   margin-top: 10px;
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
 }
 .table .table-item p {
   font: x-large sans-serif;
@@ -48,10 +52,16 @@
 }
 @media screen and (max-width: 850px) {
   .table .table-item p {
-    font-size: xx-small;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .table .table-item p {
+    font-size: 16px;
   }
 }
 .table .table-item img {
+  align-self: center;
   margin-right: 20px;
   width: 150px;
 }
@@ -73,35 +83,28 @@
     width: 100px;
   }
 }
-.table .table-item .vertical-separator {
-  height: 120px;
-  border: solid 1px #1d60b5;
-  margin-right: 180px;
+.table .table-item hr {
+  min-height: 100%;
+  max-height: 100vh;
+  width: 5px;
+  background: #1d60b5;
+  margin-right: 175px;
 }
 @media screen and (max-width: 1100px) {
-  .table .table-item .vertical-separator {
-    margin-right: 90px;
+  .table .table-item hr {
+    margin-right: 85px;
   }
 }
 @media screen and (max-width: 850px) {
-  .table .table-item .vertical-separator {
-    margin-right: 18px;
+  .table .table-item hr {
+    margin-right: 13px;
   }
 }
 @media screen and (max-width: 400px) {
-  .table .table-item .vertical-separator {
-    display: none;
-  }
-}
-.table .table-item .horizontal-separator {
-  display: none;
-  width: 120px;
-  border: solid 1px #1d60b5;
-  margin: 0 0 18px 0;
-}
-@media screen and (max-width: 400px) {
-  .table .table-item .horizontal-separator {
-    display: block;
+  .table .table-item hr {
+    width: 120px;
+    border: solid 1px #1d60b5;
+    margin: 0 0 18px 0;
   }
 }
 .table .table-item:first-of-type {
@@ -110,6 +113,7 @@
 @media screen and (max-width: 400px) {
   .table .table-item {
     flex-direction: column;
+    align-items: center;
   }
 }
 .table .reverse {
@@ -129,18 +133,23 @@
     margin-left: 2px;
   }
 }
-.table .reverse .vertical-separator {
+.table .reverse hr {
   margin-right: 0;
   margin-left: 180px;
 }
 @media screen and (max-width: 1100px) {
-  .table .reverse .vertical-separator {
+  .table .reverse hr {
     margin-left: 90px;
   }
 }
 @media screen and (max-width: 850px) {
-  .table .reverse .vertical-separator {
+  .table .reverse hr {
     margin-left: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .table .reverse hr {
+    margin: 0 0 18px 0;
   }
 }
 @media screen and (max-width: 400px) {
