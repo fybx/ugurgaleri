@@ -451,20 +451,32 @@ h1 {
   }
 }
 
+#video, #misyon, #vizyon, #hikaye, #yonetim {
+  text-align: center;
+}
+#video h1, #misyon h1, #vizyon h1, #hikaye h1, #yonetim h1 {
+  margin: 0 0 1em 0;
+  font: 600 2.5vw "Montserrat", sans-serif;
+  color: black;
+}
+#video p, #misyon p, #vizyon p, #hikaye p, #yonetim p {
+  font: 500 1.25vw "Montserrat", sans-serif;
+}
+#video ul, #misyon ul, #vizyon ul, #hikaye ul, #yonetim ul {
+  list-style-position: inside;
+  font-size: 1vw;
+}
+
 #video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
   background: linear-gradient(to left, #1d60b5, #3b8fff);
 }
 #video video {
   width: 100% !important;
   height: auto !important;
-}
-#video h1 {
-  margin: 0 0 1em 0;
-  font: 600 2.5vw "Montserrat", sans-serif;
-  color: white;
 }
 
 .sec-links-to-documents {
