@@ -1,32 +1,34 @@
 @use "../variables.scss";
 @use "../mixins.scss";
 
+#video, #misyon, #vizyon, #hikaye, #yonetim {
+  text-align: center;
+
+  h1 {
+    margin: 0 0 1em 0;
+    font: 600 2.5vw "Montserrat", sans-serif;
+    color: black;
+  }
+
+  p {
+    font: 500 1.25vw "Montserrat", sans-serif;
+  }
+
+  ul {
+    list-style-position: inside;
+    font-size: 1vw;
+  }
+}
+
 #video {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
   background: variables.$clr_brand_gradient;
 
   video {
     width: 100% !important;
     height: auto !important;
   }
-
-  h1 {
-    margin: 0 0 1em 0;
-    font: 600 2.5vw "Montserrat", sans-serif;
-    color: white;
-  }
-}
-
-#hikaye {
-
-}
-
-#misyon, #vizyon {
-
-}
-
-#yonetim {
-
 }
