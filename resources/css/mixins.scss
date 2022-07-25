@@ -72,3 +72,21 @@
     @content;
   }
 }
+
+@mixin mx_iletisim_sec_information {
+  @media screen and (max-width: overflow.$iletisim_sec_information) {
+    @content;
+  }
+}
+
+@mixin mx_iletisim_sec_information2 {
+  @media screen and (max-width: overflow.$iletisim_sec_information2) {
+    @content;
+  }
+}
+
+@mixin mx_iletisim_sec_information3 {
+  @media screen and (max-width: overflow.$iletisim_sec_information3) {
+    @content;
+  }
+}

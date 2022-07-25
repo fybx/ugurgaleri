@@ -38,6 +38,11 @@ $social-button_inner_margin: 10px;
   }
 }
 
+.araclar {
+  text-align: center;
+  font: 600 32px "Montserrat", sans-serif;
+}
+
 .table {
   display: flex;
   flex-direction: column;
@@ -46,7 +51,6 @@ $social-button_inner_margin: 10px;
     margin-top: $table-item_margin_between_items;
     display: inline-flex;
     flex-direction: row;
-    align-items: center;
 
     p {
       font: x-large sans-serif;
@@ -56,11 +60,16 @@ $social-button_inner_margin: 10px;
       }
 
       @include mixins.mx_index_brands_fix2 {
-        font-size: xx-small;
+        font-size: 18px;
+      }
+
+      @include mixins.mx_mobile {
+        font-size: 16px;
       }
     }
 
     img {
+      align-self: center;
       margin-right: math.div(variables.$px_horizontalPadding, 10);
       width: $table-item_img_width_l;
 
@@ -80,34 +89,25 @@ $social-button_inner_margin: 10px;
       }
     }
 
-    .vertical-separator {
-      // vertical-separator makes an empty div behave as a separator which aligned vertically
-      height: $table-item_img_width + 20px;
-      border: solid 1px variables.$clr_brand;
-      margin-right: 9 * math.div(variables.$px_horizontalPadding, 10);
+    hr {
+      min-height: 100%;
+      max-height: 100vh;
+      width: 5px;
+      background: variables.$clr_brand;
+      margin-right: 9 * math.div(variables.$px_horizontalPadding, 10) - 5;
 
       @include mixins.mx_index_brands_fix {
-        margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10);
+        margin-right: 9 * math.div(variables.$px_horizontalPadding2, 10) - 5;
       }
 
       @include mixins.mx_index_brands_fix2 {
-        margin-right: 9 * math.div(variables.$px_horizontalPadding3, 10);
+        margin-right: 9 * math.div(variables.$px_horizontalPadding3, 10) - 5;
       }
 
       @include mixins.mx_mobile {
-        display: none;
-      }
-    }
-
-    .horizontal-separator {
-      // horizontal-separator makes an empty div behave as a separator which aligned horizontally
-      display: none;
-      width: $table-item_img_width + 20px;
-      border: solid 1px variables.$clr_brand;
-      margin: 0 0 18px 0;
-
-      @include mixins.mx_mobile {
-        display: block;
+        width: $table-item_img_width + 20px;
+        border: solid 1px variables.$clr_brand;
+        margin: 0 0 18px 0;
       }
     }
 
@@ -117,6 +117,7 @@ $social-button_inner_margin: 10px;
 
     @include mixins.mx_mobile {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -139,7 +140,7 @@ $social-button_inner_margin: 10px;
       }
     }
 
-    .vertical-separator {
+    hr {
       margin-right: 0;
       margin-left: 9 * math.div(variables.$px_horizontalPadding, 10);;
 
@@ -149,6 +150,10 @@ $social-button_inner_margin: 10px;
 
       @include mixins.mx_index_brands_fix2 {
         margin-left: 9 * math.div(variables.$px_horizontalPadding3, 10);
+      }
+
+      @include mixins.mx_mobile {
+        margin: 0 0 18px 0;
       }
     }
 
@@ -227,34 +232,38 @@ $social-button_inner_margin: 10px;
     margin: 30px 0;
   }
 
-  .social-button {
-    display: inline-block;
-    height: $social-button_img_width + (2 * $social-button_inner_margin);
-    width: auto;
-    border: 2px solid white;
-    border-radius: 50%;
-    margin: 0 10px 0 0;
+  nav {
+    display: flex;
 
-    img {
-      margin: 10px;
-      height: $social-button_img_width;
-      width: $social-button_img_width;
-    }
-
-    &:hover {
-      background-color: white;
+    .social-button {
+      display: inline-block;
+      height: $social-button_img_width + (2 * $social-button_inner_margin);
+      width: auto;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin: 0 10px 0 0;
 
       img {
-        filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(2311%) hue-rotate(197deg) brightness(87%) contrast(88%);
+        margin: 10px;
+        height: $social-button_img_width;
+        width: $social-button_img_width;
       }
-    }
 
-    &:last-of-type {
-      margin: 0;
-    }
+      &:hover {
+        background-color: white;
 
-    @include mixins.mx_mobile {
-      margin: 0 0 30px 0;
+        img {
+          filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(2311%) hue-rotate(197deg) brightness(87%) contrast(88%);
+        }
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+
+      @include mixins.mx_mobile {
+        margin: 0 0 30px 0;
+      }
     }
   }
 
@@ -265,6 +274,12 @@ $social-button_inner_margin: 10px;
       font-size: 20px;
       font-weight: 600;
       text-align: center;
+    }
+
+    nav {
+      .social-button {
+        margin-right: 10px;
+      }
     }
   }
 }

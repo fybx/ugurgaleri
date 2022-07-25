@@ -47,10 +47,13 @@ function hideNavitems() {
 async function toggleDropdown() {
     if (dropdown.classList.contains('hidden')) {
         showDropdown();
+        await sleep(550);
+        document.getElementById("container").style.display = "none";
         await sleep(200);
         showNavitems();
     }
     else {
+        document.getElementById("container").style.display = "grid";
         dropdown.classList.add('dropdown_close_animation');
         await sleep(550);
         dropdown.classList.remove('dropdown_close_animation');
