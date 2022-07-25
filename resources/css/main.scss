@@ -5,6 +5,7 @@
 @use "views/iletisim.scss";
 @use "views/hakkimizda.scss";
 @use "views/kamera.scss";
+@use "views/galeri.scss";
 @use "partials/header.scss";
 @use "partials/footer.scss";
 @use "sass:math";
@@ -17,6 +18,19 @@ html, body {
   background-color: variables.$clr_sides;
   scroll-behavior: smooth;
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$clr_nav_sleep;
+
+  &:hover {
+    color: variables.$clr_nav_active;
+  }
+
+  &:active {
+    font-style: italic;
+  }
 }
 
 .content-spacing {
@@ -271,16 +285,18 @@ html, body {
     filter: invert(100%);
   }
 
-  &:hover {
-    width: $px_scroll-to-top_size + 10;
-    height: $px_scroll-to-top_size + 10;
-    right: 20px;
-    bottom: 50px;
-    transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
-
-    img {
-      transform: translateY(-5px);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      width: $px_scroll-to-top_size + 10;
+      height: $px_scroll-to-top_size + 10;
+      right: 20px;
+      bottom: 50px;
       transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+
+      img {
+        transform: translateY(-5px);
+        transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+      }
     }
   }
 }
