@@ -1,10 +1,11 @@
+const SCROLL_MIN = 100;
 scroll_to_top = document.getElementById("scroll-to-top");
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
-        scroll_to_top.style.display = "block";
+function checkScroll() {
+    if (document.documentElement.scrollTop > SCROLL_MIN || document.body.scrollTop > SCROLL_MIN) {
+        scroll_to_top.style.visibility = "visible";
     } else {
-        scroll_to_top.style.display = "none";
+        scroll_to_top.style.visibility = "hidden";
     }
 }
 
@@ -61,3 +62,6 @@ async function toggleDropdown() {
         hideNavitems();
     }
 }
+
+window.addEventListener('load', checkScroll);
+window.addEventListener('scroll', checkScroll);
