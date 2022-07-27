@@ -8,6 +8,7 @@
 @use "views/galeri.scss";
 @use "partials/header.scss";
 @use "partials/footer.scss";
+@use "keyframes";
 @use "sass:math";
 
 $px_scroll-to-top_size: 50px;
@@ -285,7 +286,7 @@ a {
     filter: invert(100%);
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @include mixins.mx_ismobile {
     &:hover {
       width: $px_scroll-to-top_size + 10;
       height: $px_scroll-to-top_size + 10;

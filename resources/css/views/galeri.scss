@@ -1,9 +1,16 @@
+@use "../mixins";
+@use "../keyframes";
+@use "../variables";
+
 #fullscreen {
+  margin: 0;
+  padding: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  width: 99vw;
+  width: 100%;
   height: 100vh;
+  background: black;
 
   #fullscreen-img {
     max-width: 100%;
@@ -13,21 +20,50 @@
   }
 }
 
+.gallery-text {
+  overflow: auto;
+  background: variables.$clr_brand_gradient;
+
+  h1 {
+    margin: 2.5vh 0;
+    text-align: center;
+    font: 600 2.5vw "Montserrat", sans-serif;
+    color: white;
+  }
+}
+
 .gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
-  .photo {
+  .photo-container {
     margin: 1vh 1vw;
     width: 25%;
     height: 25%;
-    cursor: pointer;
+    overflow: hidden;
 
-    &:hover {
-      filter: brightness(1.3);
+    .photo {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transition: 750ms all ease-in-out;
+      filter: brightness(80%);
+
+      &:hover {
+        filter: brightness(100%);
+        transform: scale(1.3);
+      }
+
+      @include mixins.mx_ismobile {
+        &:active {
+          filter: brightness(100%);
+          transform: scale(1.3);
+        }
+      }
     }
   }
 }

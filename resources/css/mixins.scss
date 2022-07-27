@@ -90,3 +90,9 @@
     @content;
   }
 }
+
+@mixin mx_ismobile {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
