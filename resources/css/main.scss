@@ -85,16 +85,18 @@ a {
   }
 }
 
-.dropdown {
+#drawer {
   position: fixed;
+  top: 0;
+  right: 0;
   z-index: 2;
   background: variables.$cg_drawer;
-  width: 100%;
+  width: 0;
   height: 90vh;
-  -webkit-animation: drawer-open 550ms;
-  animation: drawer-open 550ms;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  transition: width 500ms;
 
   .dropdown-nav-item {
     position: relative;
@@ -130,6 +132,12 @@ a {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
+  }
+
+  &.expanded {
+    width: 100%;
+    top: unset;
+    bottom: 0;
   }
 
   @include mixins.header_overflow2 {
@@ -257,6 +265,10 @@ a {
 
   @include mixins.header_overflow2 {
     min-height: calc(100vh - 45px);
+  }
+
+  &.hidden {
+    display: none;
   }
 }
 

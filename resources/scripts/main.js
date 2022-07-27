@@ -1,5 +1,7 @@
 const SCROLL_MIN = 100;
 scroll_to_top = document.getElementById("scroll-to-top");
+el_drawer = document.getElementById("drawer");
+el_container = document.getElementById("container");
 
 function checkScroll() {
     if (document.documentElement.scrollTop > SCROLL_MIN || document.body.scrollTop > SCROLL_MIN) {
@@ -18,17 +20,16 @@ async function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-let dropdown = document.getElementsByClassName('dropdown')[0];
 let navitems = document.getElementsByClassName('dropdown-nav-item');
 
 function showDropdown() {
-    dropdown.classList.remove('hidden');
-    dropdown.classList.add('flex');
+    el_drawer.classList.remove('hidden');
+    el_drawer.classList.add('flex');
 }
 
 function hideDropdown() {
-    dropdown.classList.remove('flex');
-    dropdown.classList.add('hidden');
+    el_drawer.classList.remove('flex');
+    el_drawer.classList.add('hidden');
 }
 
 function showNavitems() {
@@ -46,21 +47,9 @@ function hideNavitems() {
 }
 
 async function toggleDropdown() {
-    if (dropdown.classList.contains('hidden')) {
-        showDropdown();
-        await sleep(550);
-        document.getElementById("container").style.display = "none";
-        await sleep(200);
-        showNavitems();
-    }
-    else {
-        document.getElementById("container").style.display = "grid";
-        dropdown.classList.add('dropdown_close_animation');
-        await sleep(550);
-        dropdown.classList.remove('dropdown_close_animation');
-        hideDropdown();
-        hideNavitems();
-    }
+    el_drawer.classList.toggle("expanded");
+    await sleep(500);
+    el_container.classList.toggle("hidden");
 }
 
 window.addEventListener('load', checkScroll);
