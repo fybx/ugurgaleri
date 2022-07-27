@@ -285,7 +285,7 @@ a {
     filter: invert(100%);
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @include mixins.mx_ismobile {
     &:hover {
       width: $px_scroll-to-top_size + 10;
       height: $px_scroll-to-top_size + 10;
