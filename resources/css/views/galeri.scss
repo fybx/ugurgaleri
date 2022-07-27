@@ -1,4 +1,6 @@
 @use "../mixins";
+@use "../keyframes";
+@use "../variables";
 
 #fullscreen {
   margin: 0;
@@ -15,6 +17,18 @@
     max-height: 100vh;
     object-fit: cover;
     cursor: pointer;
+  }
+}
+
+.gallery-text {
+  overflow: auto;
+  background: variables.$clr_brand_gradient;
+
+  h1 {
+    margin: 2.5vh 0;
+    text-align: center;
+    font: 600 2.5vw "Montserrat", sans-serif;
+    color: white;
   }
 }
 
