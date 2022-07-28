@@ -17,16 +17,27 @@ $social-button_inner_margin: 10px;
   color: white;
   font: 500 50px Montserrat, sans-serif;
   z-index: 5;
-  bottom: 200px;
+  top: 700px;
   left: 200px;
   text-shadow: 2px 2px 15px black;
 
-  @include mixins.header_overflow2 {
-    bottom: 300px;
+  @media screen and (max-height: 1000px) {
+    top: 550px;
+  }
+
+  @media screen and (max-height: 850px) {
+    top:450px;
+  }
+
+  @media screen and (max-width: 850px) {
     left: 50px;
   }
 
-  @include mixins.mx_mobile {
+  @media screen and (max-width: 600px) {
+    top: 650px;
+  }
+
+  @media screen and (max-width: 400px) {
     font-size: 32px;
   }
 }
