@@ -22,10 +22,19 @@ async function sleep(milliseconds) {
 
 let navitems = document.getElementsByClassName('dropdown-nav-item');
 
-function toggleDropdown() {
-    el_drawer.classList.toggle("expanded");
-    for (let i = 0; i < navitems.length; i++) {
-        navitems[i].classList.toggle("visible");
+async function toggleDropdown() {
+    let expanded = el_drawer.classList.contains("expanded");
+    if (expanded) {
+        for (let i = 0; i < navitems.length; i++) {
+            navitems[i].classList.toggle("visible");
+        }
+        el_drawer.classList.toggle("expanded");
+    } else {
+        el_drawer.classList.toggle("expanded");
+        await sleep(500);
+        for (let i = 0; i < navitems.length; i++) {
+            navitems[i].classList.toggle("visible");
+        }
     }
 }
 
