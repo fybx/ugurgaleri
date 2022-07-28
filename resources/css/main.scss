@@ -85,19 +85,22 @@ a {
   }
 }
 
-.dropdown {
+#drawer {
   position: fixed;
+  bottom: 0;
+  right: 0;
   z-index: 2;
   background: variables.$cg_drawer;
-  width: 100%;
+  width: 0;
   height: 90vh;
-  -webkit-animation: drawer-open 550ms;
-  animation: drawer-open 550ms;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  transition: width 500ms;
 
-  .dropdown-nav-item {
+  .drawer-item {
     position: relative;
+    opacity: 0;
     margin-top: math.div(variables.$px_horizontalPadding, 4);
     background: variables.$cg_drawer_navitem;
     -webkit-background-clip: text;
@@ -106,8 +109,7 @@ a {
     color: transparent;
     font: 600 28px "Montserrat", sans-serif;
     text-decoration: none;
-    -webkit-animation: navbar-appear 550ms;
-    animation: navbar-appear 550ms;
+    transition: opacity 250ms ease-in-out;
 
     &:first-of-type {
       margin-top: math.div(variables.$px_horizontalPadding, 2);
@@ -130,120 +132,19 @@ a {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  &.expanded {
+    width: 100%;
+    top: unset;
   }
 
   @include mixins.header_overflow2 {
     height: calc(100vh - 45px);
-  }
-}
-
-.dropdown_close_animation {
-  -webkit-animation: drawer-close 550ms;
-  animation: drawer-close 550ms;
-}
-
-.dropdown-nav-item_close_animation {
-  -webkit-animation: navbar-disappear 550ms;
-  animation: navbar-disappear 550ms;
-}
-
-@-webkit-keyframes drawer-close {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-}
-@keyframes drawer-close {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-}
-
-@-webkit-keyframes drawer-open {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes drawer-open {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes navbar-appear {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes navbar-appear {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes navbar-disappear {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-}
-@keyframes navbar-disappear {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
   }
 }
 
@@ -258,6 +159,10 @@ a {
   @include mixins.header_overflow2 {
     min-height: calc(100vh - 45px);
   }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 #content {
@@ -270,7 +175,6 @@ a {
 #scroll-to-top {
   width: $px_scroll-to-top_size;
   height: $px_scroll-to-top_size;
-  display: none;
   position: fixed;
   right: 25px;
   bottom: 55px;
