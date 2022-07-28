@@ -2,32 +2,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
-.showcase {
-  display: flex;
-  height: 90vh;
-  background-image: url("../img/index/g.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 850px) {
-  .showcase {
-    height: 95vh;
-  }
-}
-
-.showcase-animation {
-  animation: slideshow-appear 1000ms;
-}
-
-@keyframes slideshow-appear {
+@keyframes fullscreen-image-appear {
   from {
     opacity: 0;
+    width: 0;
+    height: 0;
   }
   to {
-    opacity: 1;
+    width: 100%;
+    height: 100vh;
   }
 }
+@keyframes slideshow {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.welcome {
+  position: absolute;
+  color: white;
+  font: 500 50px Montserrat, sans-serif;
+  z-index: 5;
+  bottom: 200px;
+  left: 200px;
+  text-shadow: 2px 2px 15px black;
+}
+@media screen and (max-width: 850px) {
+  .welcome {
+    bottom: 300px;
+    left: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .welcome {
+    font-size: 32px;
+  }
+}
+
+.slideshow {
+  list-style-type: none;
+}
+@media screen and (max-width: 850px) {
+  .slideshow {
+    height: calc(100vh - 45px);
+  }
+}
+
+.slideshow {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  z-index: 0;
+}
+.slideshow li span {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  left: 0;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: slideshow 30s linear infinite 0s;
+}
+.slideshow li:nth-child(1) span {
+  background-image: url("../img/galeri/9761.jpg");
+}
+.slideshow li:nth-child(2) span {
+  background-image: url("../img/galeri/7925.jpg");
+  animation-delay: 6s;
+}
+.slideshow li:nth-child(3) span {
+  background-image: url("../img/galeri/0414.jpg");
+  animation-delay: 12s;
+}
+.slideshow li:nth-child(4) span {
+  background-image: url("../img/galeri/7815.jpg");
+  animation-delay: 18s;
+}
+.slideshow li:nth-child(5) span {
+  background-image: url("../img/galeri/0429.jpg");
+  animation-delay: 24s;
+}
+
 .araclar {
   text-align: center;
   font: 600 32px "Montserrat", sans-serif;
@@ -524,17 +597,6 @@ h1 {
   }
 }
 
-@keyframes fullscreen-image-appear {
-  from {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  to {
-    width: 100%;
-    height: 100vh;
-  }
-}
 #fullscreen {
   margin: 0;
   padding: 0;
