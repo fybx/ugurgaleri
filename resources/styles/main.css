@@ -37,14 +37,28 @@
   color: white;
   font: 500 50px Montserrat, sans-serif;
   z-index: 5;
-  bottom: 200px;
+  top: 700px;
   left: 200px;
   text-shadow: 2px 2px 15px black;
 }
+@media screen and (max-height: 1000px) {
+  .welcome {
+    top: 550px;
+  }
+}
+@media screen and (max-height: 850px) {
+  .welcome {
+    top: 450px;
+  }
+}
 @media screen and (max-width: 850px) {
   .welcome {
-    bottom: 300px;
     left: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .welcome {
+    top: 650px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -736,6 +750,13 @@ h1 {
   height: 36px;
   position: relative;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #header #toggle-label .bar {
   padding: 0;
