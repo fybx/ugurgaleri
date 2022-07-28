@@ -87,7 +87,7 @@ a {
 
 #drawer {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   z-index: 2;
   background: variables.$cg_drawer;
@@ -100,6 +100,7 @@ a {
 
   .dropdown-nav-item {
     position: relative;
+    opacity: 0;
     margin-top: math.div(variables.$px_horizontalPadding, 4);
     background: variables.$cg_drawer_navitem;
     -webkit-background-clip: text;
@@ -108,8 +109,6 @@ a {
     color: transparent;
     font: 600 28px "Montserrat", sans-serif;
     text-decoration: none;
-    -webkit-animation: navbar-appear 550ms;
-    animation: navbar-appear 550ms;
 
     &:first-of-type {
       margin-top: math.div(variables.$px_horizontalPadding, 2);
@@ -132,12 +131,15 @@ a {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
+
+    &.visible {
+      opacity: 1;
+    }
   }
 
   &.expanded {
     width: 100%;
     top: unset;
-    bottom: 0;
   }
 
   @include mixins.header_overflow2 {

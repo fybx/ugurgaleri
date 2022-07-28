@@ -22,34 +22,11 @@ async function sleep(milliseconds) {
 
 let navitems = document.getElementsByClassName('dropdown-nav-item');
 
-function showDropdown() {
-    el_drawer.classList.remove('hidden');
-    el_drawer.classList.add('flex');
-}
-
-function hideDropdown() {
-    el_drawer.classList.remove('flex');
-    el_drawer.classList.add('hidden');
-}
-
-function showNavitems() {
-    for (let i = 0; i < navitems.length; i++) {
-        navitems[i].classList.remove('hidden');
-        navitems[i].classList.add('inline-block');
-    }
-}
-
-function hideNavitems() {
-    for (let i = 0; i < navitems.length; i++) {
-        navitems[i].classList.remove('inline-block');
-        navitems[i].classList.add('hidden');
-    }
-}
-
-async function toggleDropdown() {
+function toggleDropdown() {
     el_drawer.classList.toggle("expanded");
-    await sleep(500);
-    el_container.classList.toggle("hidden");
+    for (let i = 0; i < navitems.length; i++) {
+        navitems[i].classList.toggle("visible");
+    }
 }
 
 window.addEventListener('load', checkScroll);
