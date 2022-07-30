@@ -6,12 +6,7 @@
 
   h1 {
     margin: 0 0 1em 0;
-    font: 600 2.5vw "Montserrat", sans-serif;
     color: black;
-  }
-
-  p {
-    font: 500 1.25vw "Montserrat", sans-serif;
   }
 
   ul {
@@ -30,5 +25,30 @@
   video {
     width: 100% !important;
     height: auto !important;
+  }
+}
+
+#hikaye {
+  section {
+    display: flex;
+    align-items: center;
+
+    figure {
+      img {
+        height: 25vw;
+      }
+
+      figcaption {
+        font: 500 1.25vh "Montserrat", sans-serif;
+      }
+    }
+
+  @include mixins.mx_hakkimizda_text-area {
+    flex-direction: column-reverse;
+  }
+  }
+
+  .text-area {
+    flex-direction: column;
   }
 }

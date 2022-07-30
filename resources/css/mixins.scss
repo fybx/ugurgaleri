@@ -96,3 +96,9 @@
     @content;
   }
 }
+
+@mixin mx_hakkimizda_text-area {
+  @media screen and (max-width: overflow.$hakkimizda_sec_text-area) {
+    @content;
+  }
+}
