@@ -12,49 +12,16 @@ $table-item_margin_between_items: 10px;
 $social-button_img_width: 32px;
 $social-button_inner_margin: 10px;
 
-.welcome {
-  position: absolute;
-  color: white;
-  font: 500 50px Montserrat, sans-serif;
-  z-index: 5;
-  top: 700px;
-  left: 200px;
-  text-shadow: 2px 2px 15px black;
-
-  @media screen and (max-height: 1000px) {
-    top: 550px;
-  }
-
-  @media screen and (max-height: 850px) {
-    top:450px;
-  }
-
-  @media screen and (max-width: 850px) {
-    left: 50px;
-  }
-
-  @media screen and (max-width: 600px) {
-    top: 650px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 32px;
-  }
-}
-
-.slideshow {
-  list-style-type: none;
-
-  @include mixins.header_overflow2 {
-    height: calc(100vh - 45px);
-  }
-}
-
 .slideshow {
   margin: 0;
   padding: 0;
   height: 80vh;
   z-index: 0;
+  list-style-type: none;
+
+  @include mixins.header_overflow2 {
+    height: calc(100vh - 45px);
+  }
 
   li span {
     position: absolute;
@@ -105,22 +72,6 @@ $social-button_inner_margin: 10px;
     margin-top: $table-item_margin_between_items;
     display: inline-flex;
     flex-direction: row;
-
-    p {
-      font: x-large sans-serif;
-
-      @include mixins.mx_index_brands_fix {
-        font-size: large;
-      }
-
-      @include mixins.mx_index_brands_fix2 {
-        font-size: 18px;
-      }
-
-      @include mixins.mx_mobile {
-        font-size: 16px;
-      }
-    }
 
     img {
       align-self: center;
