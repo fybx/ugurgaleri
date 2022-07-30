@@ -1,3 +1,5 @@
+@use "variables";
+
 @keyframes fullscreen-image-appear {
   from {
     opacity: 0;
@@ -28,5 +30,25 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes important {
+  0% {
+    transform: scale(1);
+    text-shadow: black 0 0 0;
+    color: white;
+  }
+
+  50% {
+    transform: scale(1.02);
+    text-shadow: variables.$clr_dark 0 0 20px;
+    color: #FFFFFF;
+  }
+
+  100% {
+    transform: scale(1);
+    text-shadow: black 0 0 0;
+    color: white;
   }
 }
