@@ -60,8 +60,21 @@ $social-button_inner_margin: 10px;
 }
 
 .araclar {
+  background: variables.$clr_brand_gradient;
   text-align: center;
-  font: 600 32px "Montserrat", sans-serif;
+
+  a {
+    display: inline-block;
+    color: white;
+    font: 600 32px "Montserrat", sans-serif;
+    animation: important 2s infinite ease-in-out;
+
+    &:hover {
+      animation-play-state: paused;
+      font-style: italic;
+      color: variables.$clr_dark;
+    }
+  }
 }
 
 .table {
