@@ -37,15 +37,11 @@
       img {
         height: 25vw;
       }
-
-      figcaption {
-        font: 500 1.25vh "Montserrat", sans-serif;
-      }
     }
 
-  @include mixins.mx_hakkimizda_text-area {
-    flex-direction: column-reverse;
-  }
+    @include mixins.mx_hakkimizda_text-area {
+      flex-direction: column-reverse;
+    }
   }
 
   .text-area {
