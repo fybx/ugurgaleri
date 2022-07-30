@@ -32,55 +32,34 @@
     opacity: 0;
   }
 }
-.welcome {
-  position: absolute;
-  color: white;
-  font: 500 50px Montserrat, sans-serif;
-  z-index: 5;
-  top: 700px;
-  left: 200px;
-  text-shadow: 2px 2px 15px black;
-}
-@media screen and (max-height: 1000px) {
-  .welcome {
-    top: 550px;
+@keyframes important {
+  0% {
+    transform: scale(1);
+    text-shadow: black 0 0 0;
+    color: white;
+  }
+  50% {
+    transform: scale(1.02);
+    text-shadow: #01003B 0 0 20px;
+    color: #FFFFFF;
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: black 0 0 0;
+    color: white;
   }
 }
-@media screen and (max-height: 850px) {
-  .welcome {
-    top: 450px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .welcome {
-    left: 50px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .welcome {
-    top: 650px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .welcome {
-    font-size: 32px;
-  }
-}
-
 .slideshow {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  z-index: 0;
   list-style-type: none;
 }
 @media screen and (max-width: 850px) {
   .slideshow {
     height: calc(100vh - 45px);
   }
-}
-
-.slideshow {
-  margin: 0;
-  padding: 0;
-  height: 80vh;
-  z-index: 0;
 }
 .slideshow li span {
   position: absolute;
@@ -89,7 +68,7 @@
   left: 0;
   color: transparent;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 90%;
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
@@ -97,6 +76,7 @@
 }
 .slideshow li:nth-child(1) span {
   background-image: url("../img/galeri/9761.jpg");
+  background-position-y: 50%;
 }
 .slideshow li:nth-child(2) span {
   background-image: url("../img/galeri/7925.jpg");
@@ -116,8 +96,19 @@
 }
 
 .araclar {
+  background: linear-gradient(to left, #1d60b5, #77afff);
   text-align: center;
+}
+.araclar a {
+  display: inline-block;
+  color: white;
   font: 600 32px "Montserrat", sans-serif;
+  animation: important 2s infinite ease-in-out;
+}
+.araclar a:hover {
+  animation-play-state: paused;
+  font-style: italic;
+  color: #01003B;
 }
 
 .table {
@@ -128,24 +119,6 @@
   margin-top: 10px;
   display: inline-flex;
   flex-direction: row;
-}
-.table .table-item p {
-  font: x-large sans-serif;
-}
-@media screen and (max-width: 1100px) {
-  .table .table-item p {
-    font-size: large;
-  }
-}
-@media screen and (max-width: 850px) {
-  .table .table-item p {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .table .table-item p {
-    font-size: 16px;
-  }
 }
 .table .table-item img {
   align-self: center;
@@ -299,7 +272,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to left, #1d60b5, #3b8fff);
+  background: linear-gradient(to left, #1d60b5, #77afff);
   color: white;
 }
 .social p {
@@ -363,7 +336,7 @@ td {
 .documents {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(to left, #1d60b5, #3b8fff);
+  background: linear-gradient(to left, #1d60b5, #77afff);
 }
 .documents .document {
   margin: 0 5vw 0 0;
@@ -555,7 +528,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   color: white;
-  background: linear-gradient(to left, #1d60b5, #3b8fff);
+  background: linear-gradient(to left, #1d60b5, #77afff);
 }
 #video video {
   width: 100% !important;
@@ -582,7 +555,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to left, #1d60b5, #3b8fff);
+  background: linear-gradient(to left, #1d60b5, #77afff);
 }
 .sec-links-to-documents h1 {
   font: 500 32px "Montserrat", sans-serif;
@@ -642,7 +615,7 @@ h1 {
 
 .gallery-text {
   overflow: auto;
-  background: linear-gradient(to left, #1d60b5, #3b8fff);
+  background: linear-gradient(to left, #1d60b5, #77afff);
 }
 .gallery-text h1 {
   margin: 2.5vh 0;
@@ -965,6 +938,20 @@ a:active {
 @media screen and (max-width: 850px) {
   .content-spacing {
     padding: 10px 20px;
+  }
+}
+
+.content-spacing-small {
+  padding: 50px 100px;
+}
+@media screen and (max-width: 1100px) {
+  .content-spacing-small {
+    padding: 25px 50px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .content-spacing-small {
+    padding: 5px 10px;
   }
 }
 
