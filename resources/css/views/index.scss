@@ -63,7 +63,7 @@ $social-button_inner_margin: 10px;
     left: 0;
     color: transparent;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50% 90%;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
@@ -72,6 +72,7 @@ $social-button_inner_margin: 10px;
 
   li:nth-child(1) span {
     background-image: urls.$index_slide1;
+    background-position-y: 50%;
   }
   li:nth-child(2) span {
     background-image: urls.$index_slide2;
