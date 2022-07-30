@@ -46,6 +46,18 @@ a {
   }
 }
 
+.content-spacing-small {
+  padding: math.div(variables.$px_horizontalPadding, 4) math.div(variables.$px_horizontalPadding, 2);
+
+  @include mixins.mx_index_brands_fix {
+    padding: math.div(variables.$px_horizontalPadding2, 4) math.div(variables.$px_horizontalPadding2, 2);
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    padding: math.div(variables.$px_horizontalPadding3, 4) math.div(variables.$px_horizontalPadding3, 2);
+  }
+}
+
 .ignore-vertical {
   // ignores vertical padding applied by .content-spacing
   padding-top: 0;
