@@ -1122,6 +1122,7 @@ a:active {
   border: none;
   border-radius: 50%;
   background-color: #1d60b5;
+  box-shadow: white 0 0 50px -5px;
 }
 #scroll-to-top img {
   height: 100%;
