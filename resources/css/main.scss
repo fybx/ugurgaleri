@@ -73,6 +73,38 @@ a {
   }
 }
 
+.paragraph {
+  font: 500 x-large "Montserrat", sans-serif;
+
+  @include mixins.mx_index_brands_fix {
+    font-size: large;
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    font-size: 18px;
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 16px;
+  }
+}
+
+.heading {
+  font: 600 50px "Montserrat", sans-serif;
+
+  @include mixins.mx_index_brands_fix {
+    font-size: 35px;
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    font-size: 25px;
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 20px;
+  }
+}
+
 #header {
   position: sticky;
   top: 0;
