@@ -74,6 +74,11 @@
   z-index: 0;
   animation: slideshow 30s linear infinite 0s;
 }
+@media screen and (max-width: 850px) {
+  .slideshow li span {
+    height: calc(100vh - 45px);
+  }
+}
 .slideshow li:nth-child(1) span {
   background-image: url("../img/galeri/9761.jpg");
   background-position-y: 50%;
@@ -109,6 +114,11 @@
   animation-play-state: paused;
   font-style: italic;
   color: #01003B;
+}
+@media screen and (max-width: 850px) {
+  .araclar a {
+    margin: 1.5vh 1vw;
+  }
 }
 
 .table {
