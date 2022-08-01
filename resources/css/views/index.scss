@@ -35,6 +35,10 @@ $social-button_inner_margin: 10px;
     opacity: 0;
     z-index: 0;
     animation: slideshow 30s linear infinite 0s;
+
+    @include mixins.header_overflow2 {
+      height: calc(100vh - 45px);
+    }
   }
 
   li:nth-child(1) span {
@@ -73,6 +77,10 @@ $social-button_inner_margin: 10px;
       animation-play-state: paused;
       font-style: italic;
       color: variables.$clr_dark;
+    }
+
+    @include mixins.header_overflow2 {
+      margin: 1.5vh 1vw;
     }
   }
 }
