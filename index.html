@@ -40,36 +40,40 @@
             <span class="bar bar4"></span>
         </label>
     </header>
-    <nav class="dropdown hidden dropdown-navbar">
-        <a class="dropdown-nav-item hidden" href="index.html">Ana sayfa</a>
-        <a class="dropdown-nav-item hidden" href="hakkimizda.html">Hakkımızda</a>
-        <a class="dropdown-nav-item hidden" href="#brands">Markalar</a>
-        <a class="dropdown-nav-item hidden" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
-        <a class="dropdown-nav-item hidden" href="iletisim.html">İletişim</a>
+    <nav id="drawer">
+        <a class="drawer-item" href="#">Ana sayfa</a>
+        <a class="drawer-item" href="hakkimizda.html">Hakkımızda</a>
+        <a class="drawer-item" href="index.html#brands">Markalar</a>
+        <a class="drawer-item" href="https://ugurgaleri1.sahibinden.com/">Araçlarımız</a>
+        <a class="drawer-item" href="iletisim.html">İletişim</a>
     </nav>
     <div id="container">
         <main id="content">
-            <div class="showcase content-spacing">
-                <h1 style="color: white; font: 500 45px Montserrat, sans-serif;">Güvenilir alışverişin<br>merkezine<br>hoşgeldiniz! </h1>
-            </div>
-            <!-- TODO <section class="araclar">
+            <ul class="slideshow">
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+            </ul>
+            <section class="araclar content-spacing-small">
                 <a href="https://ugurgaleri1.sahibinden.com/">Araçlarımızı incelemek için tıklayınız.</a>
-            </section>-->
+            </section>
             <div id="brands" class="table content-spacing">
                 <div class="table-item square">
                     <img src="resources/img/ugurgaleri-utek.png" alt="Uğur Galeri U logosu">
                     <hr>
-                    <p>Şirketimiz 4 Nisan 2001 tarihinde Karacabey, Bursa'da ikinci el ticari araç ve ağır vasıta satışına başlamıştır. Köklü galericilik deneyimini, satış politikalarını ve zamana ayak uyduran yenilikçi bakış açısını bünyesinde harmanlayan, sektöre yön veren ve yapmış olduğu işler ile sektördeki varlığını kanıtlamış bir firmadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
+                    <p class="paragraph">Şirketimiz 1996 yılında Karacabey, Bursa'da ikinci el ticari araç ve ağır vasıta satışına başlamıştır. Köklü galericilik deneyimini, satış politikalarını ve zamana ayak uyduran yenilikçi bakış açısını bünyesinde harmanlayan, sektöre yön veren ve yapmış olduğu işler ile sektördeki varlığını kanıtlamış bir firmadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
                 </div>
                 <div class="table-item reverse">
                     <img src="resources/img/UKT/UKT.png" alt="Uğur Koçak Treyler logosu">
                     <hr>
-                    <p>Uğur Koçak Treyler, müşteri gereksinimlerine istinaden 21 Eylül 2012 tarihinde <b>sıfır araç</b> satışı yapmak için kurulmuştur. Firma Uğur Galeri yerleşkesi içerisinde distribütörlük/bayilik anlaşması yapmış olduğu ağır vasıta sektörünün treyler grubunda öncü firmalar ile çalışmakta olup müşterilerin ihtiyaçlarına en hızlı, en doğru ve en kullanışlı biçimde cevap verebilecek niteliktedir.<br>Satış yelpazesinde <b><i>Krone, Makinsan ve Otokar</i></b> firmaları yer almaktadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
+                    <p class="paragraph">Uğur Koçak Treyler, müşteri gereksinimlerine istinaden 2012 yılında <b>sıfır araç</b> satışı yapmak için kurulmuştur. Firma Uğur Galeri yerleşkesi içerisinde distribütörlük/bayilik anlaşması yapmış olduğu ağır vasıta sektörünün treyler grubunda öncü firmalar ile çalışmakta olup müşterilerin ihtiyaçlarına en hızlı, en doğru ve en kullanışlı biçimde cevap verebilecek niteliktedir.<br>Satış yelpazesinde <b><i>Krone, Makinsan ve Otokar</i></b> firmaları yer almaktadır. <a href="iletisim.html#information">Satın alma için tıklayınız.</a></p>
                 </div>
                 <div class="table-item">
                     <img src="resources/img/galericilerden.com/galericilerden.jpg" alt="galericilerden.com logosu">
                     <hr>
-                    <p>2018 yılında interaktif satışın müşterilerin talepleri doğrultusunda mevcut ürünlerin tanıtımı ve pazarlanması amacıyla Uğur Galeri bünyesinde e-ticaret alışveriş sitesi olarak kurulmuştur. Hedefimiz, galeri sahiplerinin güvenilir bir platformda araçlarını detaylı biçimde sunabilmeleri; müşterilerin de ihtiyaçlarına göre güvenilir ve uygun şekilde ulaşmalarını sağlamaktır.</p>
+                    <p class="paragraph">2018 yılında interaktif satışın müşterilerin talepleri doğrultusunda mevcut ürünlerin tanıtımı ve pazarlanması amacıyla Uğur Galeri bünyesinde e-ticaret alışveriş sitesi olarak kurulmuştur. Hedefimiz, galeri sahiplerinin güvenilir bir platformda araçlarını detaylı biçimde sunabilmeleri; müşterilerin de ihtiyaçlarına göre güvenilir ve uygun şekilde ulaşmalarını sağlamaktır.</p>
                 </div>
             </div>
             <div id="social" class="social content-spacing ignore-vertical">
@@ -88,7 +92,7 @@
                 <div class="footer-column">
                     <h1>Uğur Galeri</h1>
                     <ul>
-                        <li><a href="index.html">Ana sayfa</a></li>
+                        <li><a href="#">Ana sayfa</a></li>
                         <li><a href="hakkimizda.html">Hakkımızda</a></li>
                         <li><a href="#brands">Markalarımız</a></li>
                         <li><a href="https://ugurgaleri1.sahibinden.com">Araçlarımız</a></li>
@@ -98,11 +102,11 @@
                 <div class="footer-column">
                     <h1>Kurumsal</h1>
                     <ul>
-                    <li><a href="hakkimizda.html#misyon">Misyonumuz</a></li>
-                    <li><a href="hakkimizda.html#vizyon">Vizyonumuz</a></li>
-                    <li><a href="hakkimizda.html#yonetim">Yönetim</a></li>
-                    <li><a href="aydinlatma.html">KVKK Aydınlatma Metni</a></li>
-                    <li><a href="kamera.html">Kamera Kullanımı</a></li>
+                        <li><a href="hakkimizda.html#misyon">Misyonumuz</a></li>
+                        <li><a href="hakkimizda.html#vizyon">Vizyonumuz</a></li>
+                        <li><a href="galeri.html">Fotoğraf Galerisi</a></li>
+                        <li><a href="aydinlatma.html">Aydınlatma Metni</a></li>
+                        <li><a href="kamera.html">Kamera Kullanımı</a></li>
                     </ul>
                 </div>
             </div>

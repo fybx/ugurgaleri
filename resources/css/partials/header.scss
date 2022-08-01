@@ -98,6 +98,13 @@ $toggle-label_s_second_bar: math.div($toggle-label_s_width - 4, 2);
     height: $toggle-label_l_width;
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     .bar {
       padding: 0;

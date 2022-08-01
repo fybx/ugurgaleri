@@ -1,10 +1,13 @@
-scroll_to_top = document.getElementById("scroll-to-top");
+const SCROLL_MIN = 100;
+const $scroll_to_top = document.getElementById("scroll-to-top");
+const $drawer = document.getElementById("drawer");
+const $drawer_item = document.querySelectorAll(".drawer-item");
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
-        scroll_to_top.style.display = "block";
+function checkScroll() {
+    if (document.documentElement.scrollTop > SCROLL_MIN || document.body.scrollTop > SCROLL_MIN) {
+        $scroll_to_top.style.visibility = "visible";
     } else {
-        scroll_to_top.style.display = "none";
+        $scroll_to_top.style.visibility = "hidden";
     }
 }
 
@@ -17,47 +20,21 @@ async function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-let dropdown = document.getElementsByClassName('dropdown')[0];
-let navitems = document.getElementsByClassName('dropdown-nav-item');
-
-function showDropdown() {
-    dropdown.classList.remove('hidden');
-    dropdown.classList.add('flex');
-}
-
-function hideDropdown() {
-    dropdown.classList.remove('flex');
-    dropdown.classList.add('hidden');
-}
-
-function showNavitems() {
-    for (let i = 0; i < navitems.length; i++) {
-        navitems[i].classList.remove('hidden');
-        navitems[i].classList.add('inline-block');
-    }
-}
-
-function hideNavitems() {
-    for (let i = 0; i < navitems.length; i++) {
-        navitems[i].classList.remove('inline-block');
-        navitems[i].classList.add('hidden');
-    }
-}
-
 async function toggleDropdown() {
-    if (dropdown.classList.contains('hidden')) {
-        showDropdown();
-        await sleep(550);
-        document.getElementById("container").style.display = "none";
-        await sleep(200);
-        showNavitems();
-    }
-    else {
-        document.getElementById("container").style.display = "grid";
-        dropdown.classList.add('dropdown_close_animation');
-        await sleep(550);
-        dropdown.classList.remove('dropdown_close_animation');
-        hideDropdown();
-        hideNavitems();
+    let expanded = $drawer.classList.contains("expanded");
+    if (expanded) {
+        for (let i = 0; i < $drawer_item.length; i++) {
+            $drawer_item[i].classList.toggle("visible");
+        }
+        $drawer.classList.toggle("expanded");
+    } else {
+        $drawer.classList.toggle("expanded");
+        await sleep(250);
+        for (let i = 0; i < $drawer_item.length; i++) {
+            $drawer_item[i].classList.toggle("visible");
+        }
     }
 }
+
+window.addEventListener('load', checkScroll);
+window.addEventListener('scroll', checkScroll);

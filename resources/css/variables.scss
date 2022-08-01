@@ -23,10 +23,11 @@ $sz_s_footer_p: 8px;
 
 $clr_dark: #01003B;
 $clr_brand: #1d60b5;
-$clr_brand_gradient: linear-gradient(to left, $clr_brand, #3b8fff);
+$clr_brand_gradient: linear-gradient(to left, $clr_brand, #77afff);
 $cg_drawer: linear-gradient(to left bottom, $clr_brand, #003e86);
 $cg_drawer_navitem: linear-gradient(#FFFFFF, #adf0ff);
 $cg_drawer_navitem2: linear-gradient(to top, #FFFFFF, #adf0ff);
+$cg_brand_reverse: linear-gradient(to right, $clr_brand, #77afff);
 
 $clr_logo: #FDFFFF;
 $clr_header: #FDFFFF;
