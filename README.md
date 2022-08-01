@@ -1,4 +1,4 @@
-## ugurgaleri
+## ugurgaleri [![Deploy main to fybx.dev](https://github.com/fybx/ugurgaleri/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/fybx/ugurgaleri/actions/workflows/main.yml)
 &copy; Uğur Galeri
 
 &copy; Ferit Yiğit BALABAN <[f@fybx.dev](mailto:f@fybx.dev)>
