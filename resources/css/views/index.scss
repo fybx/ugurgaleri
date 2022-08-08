@@ -94,19 +94,20 @@ $social-button_inner_margin: 10px;
     display: inline-flex;
     flex-direction: row;
 
+    picture {
+      place-self: center;
+    }
+
     img {
       align-self: center;
       margin-right: math.div(variables.$px_horizontalPadding, 10);
-      width: $table-item_img_width_l;
 
       @include mixins.mx_index_brands_fix {
         margin-right: math.div(variables.$px_horizontalPadding2, 10);
-        width: $table-item_img_width;
       }
 
       @include mixins.mx_index_brands_fix2 {
         margin-right: math.div(variables.$px_horizontalPadding3, 10);
-        width: $table-item_img_width_s;
       }
 
       @include mixins.mx_mobile {
@@ -195,17 +196,6 @@ $social-button_inner_margin: 10px;
 
   .square {
     img {
-      height: $table-item_img_width_l;
-      width: auto;
-
-      @include mixins.mx_index_brands_fix {
-        height: $table-item_img_width;
-      }
-
-      @include mixins.mx_index_brands_fix2 {
-        height: $table-item_img_width_s;
-      }
-
       @include mixins.mx_mobile {
         height: $table-item_img_width;
       }
