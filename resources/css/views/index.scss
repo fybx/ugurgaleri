@@ -112,7 +112,6 @@ $social-button_inner_margin: 10px;
 
       @include mixins.mx_mobile {
         margin: 0 0 2px 0;
-        width: $table-item_img_width;
       }
     }
 
@@ -189,15 +188,6 @@ $social-button_inner_margin: 10px;
 
       img {
         margin: 0 0 2px 0;
-        width: $table-item_img_width;
-      }
-    }
-  }
-
-  .square {
-    img {
-      @include mixins.mx_mobile {
-        height: $table-item_img_width;
       }
     }
   }
