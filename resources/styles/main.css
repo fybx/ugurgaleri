@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Oswald:wght@600&display=swap");
 @keyframes fullscreen-image-appear {
   from {
     opacity: 0;
@@ -80,23 +77,23 @@
   }
 }
 .slideshow li:nth-child(1) span {
-  background-image: url("../img/galeri/9761.jpg");
+  background-image: url("../img/galeri/9761.webp");
   background-position-y: 50%;
 }
 .slideshow li:nth-child(2) span {
-  background-image: url("../img/galeri/7925.jpg");
+  background-image: url("../img/galeri/7925.webp");
   animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-  background-image: url("../img/galeri/0414.jpg");
+  background-image: url("../img/galeri/0414.webp");
   animation-delay: 12s;
 }
 .slideshow li:nth-child(4) span {
-  background-image: url("../img/galeri/7815.jpg");
+  background-image: url("../img/galeri/7815.webp");
   animation-delay: 18s;
 }
 .slideshow li:nth-child(5) span {
-  background-image: url("../img/galeri/0429.jpg");
+  background-image: url("../img/galeri/0429.webp");
   animation-delay: 24s;
 }
 
@@ -130,21 +127,21 @@
   display: inline-flex;
   flex-direction: row;
 }
+.table .table-item picture {
+  place-self: center;
+}
 .table .table-item img {
   align-self: center;
   margin-right: 20px;
-  width: 150px;
 }
 @media screen and (max-width: 1100px) {
   .table .table-item img {
     margin-right: 10px;
-    width: 100px;
   }
 }
 @media screen and (max-width: 850px) {
   .table .table-item img {
     margin-right: 2px;
-    width: 60px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -229,20 +226,6 @@
   .table .reverse img {
     margin: 0 0 2px 0;
     width: 100px;
-  }
-}
-.table .square img {
-  height: 150px;
-  width: auto;
-}
-@media screen and (max-width: 1100px) {
-  .table .square img {
-    height: 100px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .table .square img {
-    height: 60px;
   }
 }
 @media screen and (max-width: 400px) {
