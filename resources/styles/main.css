@@ -278,8 +278,6 @@
 }
 .social nav .social-button img {
   margin: 10px;
-  height: 32px;
-  width: 32px;
 }
 .social nav .social-button:hover {
   background-color: white;
@@ -819,10 +817,6 @@ h1 {
   font: 16px "Montserrat", sans-serif;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-#footer #small-logo {
-  height: 50px;
-  width: auto;
 }
 #footer .footer-columns {
   display: flex;
