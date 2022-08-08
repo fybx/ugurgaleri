@@ -147,7 +147,6 @@
 @media screen and (max-width: 400px) {
   .table .table-item img {
     margin: 0 0 2px 0;
-    width: 100px;
   }
 }
 .table .table-item hr {
@@ -225,12 +224,6 @@
   }
   .table .reverse img {
     margin: 0 0 2px 0;
-    width: 100px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .table .square img {
-    height: 100px;
   }
 }
 .table .table-item-animation {
@@ -1024,6 +1017,7 @@ a:active {
 }
 
 #drawer {
+  overflow: hidden;
   position: fixed;
   bottom: 0;
   right: 0;
