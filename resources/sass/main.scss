@@ -1,13 +1,7 @@
-@use "variables.scss";
-@use "mixins.scss";
-@use "views/index.scss";
-@use "views/aydinlatma.scss";
-@use "views/iletisim.scss";
-@use "views/hakkimizda.scss";
-@use "views/kamera.scss";
-@use "views/galeri.scss";
-@use "partials/header.scss";
-@use "partials/footer.scss";
+@use "variables";
+@use "mixins";
+@use "partials/header";
+@use "partials/footer";
 @use "keyframes";
 @use "sass:math";
 
