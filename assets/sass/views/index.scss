@@ -1,6 +1,5 @@
 @use "../variables.scss";
 @use "../mixins.scss";
-@use "../urls.scss";
 @use "../keyframes";
 @use "sass:math";
 
@@ -42,23 +41,23 @@ $social-button_inner_margin: 10px;
   }
 
   li:nth-child(1) span {
-    background-image: urls.$index_slide1;
+    background-image: url("../../img/galeri/9761.webp");
     background-position-y: 50%;
   }
   li:nth-child(2) span {
-    background-image: urls.$index_slide2;
+    background-image: url("../../img/galeri/7925.webp");
     animation-delay: 6s;
   }
   li:nth-child(3) span {
-    background-image: urls.$index_slide3;
+    background-image: url("../../img/galeri/0414.webp");
     animation-delay: 12s;
   }
   li:nth-child(4) span {
-    background-image: urls.$index_slide4;
+    background-image: url("../../img/galeri/7815.webp");
     animation-delay: 18s;
   }
   li:nth-child(5) span {
-    background-image: urls.$index_slide5;
+    background-image: url("../../img/galeri/0429.webp");
     animation-delay: 24s;
   }
 }
