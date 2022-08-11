@@ -1,0 +1,245 @@
+@use "variables";
+@use "mixins";
+@use "partials/header";
+@use "partials/footer";
+@use "keyframes";
+@use "sass:math";
+
+$px_scroll-to-top_size: 50px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: variables.$clr_sides;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$clr_nav_sleep;
+
+  &:hover {
+    color: variables.$clr_nav_active;
+  }
+
+  &:active {
+    font-style: italic;
+  }
+}
+
+.content-spacing {
+  padding: math.div(variables.$px_horizontalPadding, 2) variables.$px_horizontalPadding;
+
+  @include mixins.mx_index_brands_fix {
+    padding: math.div(variables.$px_horizontalPadding2, 2) variables.$px_horizontalPadding2;
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    padding: math.div(variables.$px_horizontalPadding3, 2) variables.$px_horizontalPadding3;
+  }
+}
+
+.content-spacing-small {
+  padding: math.div(variables.$px_horizontalPadding, 4) math.div(variables.$px_horizontalPadding, 2);
+
+  @include mixins.mx_index_brands_fix {
+    padding: math.div(variables.$px_horizontalPadding2, 4) math.div(variables.$px_horizontalPadding2, 2);
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    padding: math.div(variables.$px_horizontalPadding3, 4) math.div(variables.$px_horizontalPadding3, 2);
+  }
+}
+
+.ignore-vertical {
+  // ignores vertical padding applied by .content-spacing
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.paragraph {
+  font: 500 x-large "Montserrat", sans-serif;
+
+  @include mixins.mx_index_brands_fix {
+    font-size: large;
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    font-size: 18px;
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 16px;
+  }
+}
+
+.heading {
+  font: 600 50px "Montserrat", sans-serif;
+
+  @include mixins.mx_index_brands_fix {
+    font-size: 35px;
+  }
+
+  @include mixins.mx_index_brands_fix2 {
+    font-size: 25px;
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 20px;
+  }
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  // Layout, details and children is set in partials/header.scss
+  height: 10vh;
+
+  @include mixins.header_overflow2 {
+    height: 45px;
+  }
+}
+
+#drawer {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: variables.$cg_drawer;
+  width: 0;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 500ms;
+
+  .drawer-item {
+    position: relative;
+    opacity: 0;
+    margin-top: math.div(variables.$px_horizontalPadding, 4);
+    background: variables.$cg_drawer_navitem;
+    -webkit-background-clip: text;
+    //noinspection CssInvalidPropertyValue
+    background-clip: text;
+    color: transparent;
+    font: 600 28px "Montserrat", sans-serif;
+    text-decoration: none;
+    transition: opacity 250ms ease-in-out;
+
+    &:first-of-type {
+      margin-top: math.div(variables.$px_horizontalPadding, 2);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to left, #FFF, #AFF);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  &.expanded {
+    width: 100%;
+    top: unset;
+  }
+
+  @include mixins.header_overflow2 {
+    height: calc(100vh - 45px);
+  }
+}
+
+#container {
+  min-height: 90vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
+  overflow: auto;
+
+  @include mixins.header_overflow2 {
+    min-height: calc(100vh - 45px);
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+#content {
+  background: whitesmoke;
+  grid-column: 1;
+  grid-row: 1;
+  overflow-wrap: break-word;
+}
+
+#scroll-to-top {
+  display: none;
+  width: $px_scroll-to-top_size;
+  height: $px_scroll-to-top_size;
+  position: fixed;
+  right: 25px;
+  bottom: 55px;
+  z-index: 99;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: variables.$clr_brand;
+  box-shadow: white 0 0 50px -5px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    filter: invert(100%);
+  }
+
+  @include mixins.mx_ismobile {
+    &:hover {
+      width: $px_scroll-to-top_size + 10;
+      height: $px_scroll-to-top_size + 10;
+      right: 20px;
+      bottom: 50px;
+      transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+
+      img {
+        transform: translateY(-5px);
+        transition: 250ms cubic-bezier(0.51, 1.27, 0.18, 0.96);
+      }
+    }
+  }
+}
+
+#footer {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#footer-stateless {
+  grid-column: 1;
+  grid-row: 3;
+}

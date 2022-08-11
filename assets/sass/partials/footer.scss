@@ -1,0 +1,84 @@
+@use "../variables.scss";
+@use "../mixins.scss";
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: variables.$clr_footerBackground;
+  font: 16px "Montserrat", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .footer-columns {
+    display: flex;
+
+    .footer-column {
+      margin: 0 20px 20px 20px;
+
+      h1 {
+        margin: 0 0 16px 0;
+        font: 700 18px "Montserrat", sans-serif;
+        color: variables.$clr_footerSleepHigh;
+
+        @include mixins.mx_mobile {
+          font-size: 14px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: variables.$clr_footerSleepLow;
+
+        &:hover {
+          font-size: 17px;
+          color: variables.$clr_footerActive;
+
+          @include mixins.mx_mobile {
+            font-size: 13px;
+          }
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+    }
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 12px;
+  }
+}
+
+#footer-stateless {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$clr_brand;
+  color: white;
+  font: 14px "Montserrat", sans-serif;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      font-style: italic;
+    }
+  }
+
+  .smaller {
+    font-weight: 200;
+    font-size: 12px;
+
+    @include mixins.mx_mobile {
+      font-size: 8px;
+    }
+  }
+
+  @include mixins.mx_mobile {
+    font-size: 10px;
+  }
+}
