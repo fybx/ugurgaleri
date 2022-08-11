@@ -18,7 +18,6 @@ html, body {
   padding: 0;
   background-color: variables.$clr_sides;
   scroll-behavior: smooth;
-  font-family: sans-serif;
 }
 
 a {
@@ -62,18 +61,6 @@ a {
   // ignores vertical padding applied by .content-spacing
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-.flex {
-  display: flex;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .no-decoration {
@@ -218,6 +205,7 @@ a {
 }
 
 #scroll-to-top {
+  display: none;
   width: $px_scroll-to-top_size;
   height: $px_scroll-to-top_size;
   position: fixed;

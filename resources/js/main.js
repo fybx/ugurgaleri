@@ -1,23 +1,19 @@
 const SCROLL_MIN = 100;
-const $scroll_to_top = document.getElementById("scroll-to-top");
-const $drawer = document.getElementById("drawer");
+const $scroll_to_top = document.querySelector("#scroll-to-top");
+const $drawer = document.querySelector("#drawer");
 const $drawer_item = document.querySelectorAll(".drawer-item");
 
 function checkScroll() {
     if (document.documentElement.scrollTop > SCROLL_MIN || document.body.scrollTop > SCROLL_MIN) {
-        $scroll_to_top.style.visibility = "visible";
+        $scroll_to_top.style.display = "block";
     } else {
-        $scroll_to_top.style.visibility = "hidden";
+        $scroll_to_top.style.display = "none";
     }
 }
 
 function scrollToTop() {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-}
-
-async function sleep(milliseconds) {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
 async function toggleDropdown() {
@@ -27,14 +23,15 @@ async function toggleDropdown() {
             $drawer_item[i].classList.toggle("visible");
         }
         $drawer.classList.toggle("expanded");
+        $scroll_to_top.style.display = "block";
     } else {
         $drawer.classList.toggle("expanded");
-        await sleep(250);
+        $scroll_to_top.style.display = "none";
+        await new Promise(r => setTimeout(r, 250));
         for (let i = 0; i < $drawer_item.length; i++) {
             $drawer_item[i].classList.toggle("visible");
         }
     }
 }
 
-window.addEventListener('load', checkScroll);
 window.addEventListener('scroll', checkScroll);
